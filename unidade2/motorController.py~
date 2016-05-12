@@ -54,7 +54,6 @@ def pwmMotor():
 	global curve
 	global valueMotor
 	global shutdown
-	global curve
 
 	motor = mraa.Pwm(11)
 	motor.period_us(5000)
@@ -67,6 +66,8 @@ def pwmMotor():
 	motorLed.period_us(5000)
 	motorLed.enable(True)
 
+
+	curve = 1
 
 	while not shutdown:
 		if (systemOn):
@@ -100,7 +101,7 @@ def pwmMotor():
 def sensorRead():
 	global valueSensor
 	global shutdown
-	global valueMotor
+    global valueMotor
 
 	sensorLed = mraa.Pwm(6)
 	sensorLed.period_us(5000)
@@ -119,46 +120,41 @@ def sensorRead():
 	sensorLed.write(0.0)
 
 def sockettcp():
-	global timestamp
-	global systemOn
-	global con
-	global valueMotor
-	global curve
-
-	oldtimestamp = -1
-
-	tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	orig = ("",8888)
-	tcp.bind(orig)
-	tcp.listen(1)
-	print "Socket created and listening"
-
-
-	while not shutdown:
-		con, cliente = tcp.accept()
-		print "Connection accepted from: " + str(cliente)
-		data = con.recv(1024)
-		print "Message from client: " + str(data)
-		while not shutdown:
-			if (systemOn and timestamp != oldtimestamp and not shutdown):
-				try:
-					con.send(str(valueMotor))
-				except IOError, e:
-					if e.errno == errno.EPIPE:
-						print "Connection lost"
-
-				oldtimestamp = timestamp
-			elif not systemOn:
-				data = con.recv(1024)
-				print "Received: " + str(data)
-
-				if data == "a":
-					systemOn = True
-					curve = 1
-				elif data =="b":
-					systemOn = True
-					curve = 2
-
+    global timestamp
+    global systemOn
+    global con
+    global valueMotor
+    
+    oldtimestamp = -1
+    
+    tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    orig = ("",8888)
+    tcp.bind(orig)
+    tcp.listen(1)
+    print "Socket created and listening"
+    
+    
+    while not shutdown:
+        con, cliente = tcp.accept()
+        print "Connection accepted from: " + str(cliente)
+        data = con.recv(1024)
+        print "Message from client: " + str(data)
+        while not shutdown:
+            if (systemOn and timestamp != oldtimestamp and not shutdown):
+            	try:
+                	con.send(valueMotor)
+                except IOError, e:
+    				if e.errno == errno.EPIPE:
+    					print "Connection lost"
+    					
+                oldtimestamp = timestamp
+            elif not systemOn:
+            	data = con.recv(1024)
+            	print "Received: " + str(data)
+            	
+            	if data == "a":
+            		systemOn = True       
+	
 
 #Variaveis Globais
 timestamp = 0 # mede a passagem do tempo em segundos
@@ -168,7 +164,6 @@ valueMotor = 0
 shutdown = False
 valueSensor = 0
 con = None
-curve = 1
 
 # ledSys = mraa.Gpio(4)
 # ledSys.dir(mraa.DIR_OUT)
