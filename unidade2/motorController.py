@@ -29,17 +29,17 @@ def systemButton():
 
 def timer():
 	global timestamp
-	global systemOn  
+	global systemOn
 	global valueMotor
 	global valueSensor
-	global shutdown                                                                                                                                                                                                                                            
+	global shutdown
 
 	d1 = datetime.datetime.now()
 	sec = datetime.timedelta(seconds=1)
 
 	while not shutdown:
 		if (systemOn):
-			d2 = datetime.datetime.now()	
+			d2 = datetime.datetime.now()
 			if d2 - d1 >= sec:
 				d1 = datetime.datetime.now()
 				timestamp +=1
@@ -65,7 +65,7 @@ def pwmMotor():
 	motorLed = mraa.Pwm(5)
 	motorLed.period_us(5000)
 	motorLed.enable(True)
-	
+
 
 	curve = 1
 
@@ -75,7 +75,7 @@ def pwmMotor():
 				if (timestamp >= 0 and timestamp < 30):
 					valueMotor = (0.3 * (timestamp/30.0))
 				elif (timestamp >= 30 and timestamp < 60):
-					valueMotor = 0.3 
+					valueMotor = 0.3
 				elif (timestamp >= 60 and timestamp < 90):
 					valueMotor = 0.3 + (0.45 * ((timestamp-60)/30.0))
 				elif (timestamp >= 90 and timestamp <= 120):
@@ -91,7 +91,7 @@ def pwmMotor():
 				motorLed.write(valueMotor)
 				oldValueMotor = valueMotor
 
-				print str(valueMotor) + " " + str(oldValueMotor)	
+				print str(valueMotor) + " " + str(oldValueMotor)
 
 		else:
 			motor.write(0.0)
@@ -121,9 +121,9 @@ def sensorRead():
 	sensorLed.write(0.0)
 
 def socket():
-	pass
 
-	
+
+
 #Variaveis Globais
 timestamp = 0 # mede a passagem do tempo em segundos
 systemOn = False # indica se o sistema esta ativo ou nao
