@@ -73,15 +73,15 @@ def pwmMotor():
 		if (systemOn):
 			if (curve == 1):
 				if (timestamp >= 0 and timestamp < 30):
-					valueMotor = (0.3 * (timestamp/30.0))
+					valueMotor = sensorRead*(0.3 * (timestamp/30.0))
 				elif (timestamp >= 30 and timestamp < 60):
-					valueMotor = 0.3
+					valueMotor = sensorRead*0.3
 				elif (timestamp >= 60 and timestamp < 90):
-					valueMotor = 0.3 + (0.45 * ((timestamp-60)/30.0))
+					valueMotor = sensorRead*(0.3 + (0.45 * ((timestamp-60)/30.0)))
 				elif (timestamp >= 90 and timestamp <= 120):
-					valueMotor = 0.75
+					valueMotor = sensorRead*0.75
 				elif (timestamp >= 120 and timestamp < 180):
-					valueMotor = (0.75 - ((timestamp - 120) * (0.75/60.0)))
+					valueMotor = sensorRead*(0.75 - ((timestamp - 120) * (0.75/60.0)))
 				else:
 					#valueMotor = 0.0
 					systemOn = False
