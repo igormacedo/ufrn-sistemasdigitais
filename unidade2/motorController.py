@@ -54,6 +54,7 @@ def pwmMotor():
 	global curve
 	global valueMotor
 	global shutdown
+	global valueSensor
 
 	motor = mraa.Pwm(11)
 	motor.period_us(5000)
