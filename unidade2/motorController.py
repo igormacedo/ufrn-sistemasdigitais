@@ -4,10 +4,12 @@ import sys
 import datetime
 import time
 import mraa
+import math
 
 def systemButton():
 	global systemOn
 	global shutdown
+	global con
 
 	switch = mraa.Gpio(12)
 	switch.dir(mraa.DIR_IN)
@@ -17,8 +19,13 @@ def systemButton():
 	systemLed.dir(mraa.DIR_OUT)
 
 	while not shutdown:
-		if (switch.read() == 0):
+		if (switch.read() == 0 and not systemOn):
 			systemOn = True
+			try:
+				con.send("on")
+			except IOError, e:
+				if e.errno == errno.EPIPE:
+					print "no connection"
 
 		if systemOn:
 			systemLed.write(1)
@@ -33,6 +40,7 @@ def timer():
 	global valueMotor
 	global valueSensor
 	global shutdown
+	global con
 
 	d1 = datetime.datetime.now()
 	sec = datetime.timedelta(seconds=1)
@@ -43,9 +51,19 @@ def timer():
 			if d2 - d1 >= sec:
 				d1 = datetime.datetime.now()
 				timestamp +=1
+				
+				motorPwm = valueMotor
+				
 				print "time:"+str(timestamp),
-				print "\t\tpwmMotor:"+str(valueMotor),
+				print "\t\tpwmMotor:"+str(motorPwm),
 				print "\t\tsensor:" +str(valueSensor)
+				
+				try:
+					con.send(str(motorPwm))
+				except IOError, e:
+					if e.errno == errno.EPIPE:
+						print "no connection"
+
 		else:
 			timestamp = 0
 
@@ -72,18 +90,26 @@ def pwmMotor():
 	while not shutdown:
 		if (systemOn):
 			if (curve == 1):
+				pond = (1024-valueSensor)/1024.0 +0.3
 				if (timestamp >= 0 and timestamp < 30):
-					valueMotor = valueSensor*(0.3 * (timestamp/30.0))
+					valueMotor = pond*(0.3 * (timestamp/30.0))
 				elif (timestamp >= 30 and timestamp < 60):
-					valueMotor = valueSensor*0.3
+					valueMotor = pond*0.3
 				elif (timestamp >= 60 and timestamp < 90):
-					valueMotor = valueSensor*(0.3 + (0.45 * ((timestamp-60)/30.0)))
+					valueMotor = pond*(0.3 + (0.45 * ((timestamp-60)/30.0)))
 				elif (timestamp >= 90 and timestamp <= 120):
-					valueMotor = valueSensor*0.75
+					valueMotor = pond*0.75
 				elif (timestamp >= 120 and timestamp < 180):
-					valueMotor = valueSensor*(0.75 - ((timestamp - 120) * (0.75/60.0)))
+					valueMotor = pond*(0.75 - ((timestamp - 120) * (0.75/60.0)))
 				else:
 					#valueMotor = 0.0
+					systemOn = False
+					
+			elif (curve == 2):
+				pond = (1024-valueSensor)/1024.0 +0.3
+				if (timestamp >= 0 and timestamp < 180):
+					valueMotor = pond*(0.5 + 0.5*math.sin(timestamp*6.28/180.0))
+				else:
 					systemOn = False
 
 			if oldValueMotor != valueMotor:
@@ -125,6 +151,7 @@ def sockettcp():
 	global con
 	global valueMotor
 	global curve
+	global socketConnected
 
 	oldtimestamp = -1
 
@@ -140,25 +167,27 @@ def sockettcp():
 		print "Connection accepted from: " + str(cliente)
 		data = con.recv(1024)
 		print "Message from client: " + str(data)
+		socketConnected = True
 		while not shutdown:
-			if (systemOn and timestamp != oldtimestamp and not shutdown):
-				try:
-					con.send(str(valueMotor))
-				except IOError, e:
-					if e.errno == errno.EPIPE:
-						print "Connection lost"
+			#if (systemOn and timestamp != oldtimestamp and not shutdown):
+				#try:
+					#con.send(str(valueMotor))
+				#except IOError, e:
+					#if e.errno == errno.EPIPE:
+						#print "no connection"
 
-				oldtimestamp = timestamp
-			elif not systemOn:
+				#oldtimestamp = timestamp
+			if not systemOn and socketConnected:
 				data = con.recv(1024)
-				print "Received: " + str(data)
+				if str(data) != "":
+					print "Received: " + str(data)
 
-				if data == "a":
-					systemOn = True
-					curve = 1
-				elif data =="b":
-					systemOn = True
-					curve = 2
+					if data == "a":
+						systemOn = True
+						curve = 1
+					elif data =="b":
+						systemOn = True
+						curve = 2
 
 
 #Variaveis Globais
@@ -170,6 +199,7 @@ shutdown = False
 valueSensor = 0
 con = None
 curve = 1
+socketConnected = False
 
 # ledSys = mraa.Gpio(4)
 # ledSys.dir(mraa.DIR_OUT)
