@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Documents\Igor Macedo\Sistemas Digitais\proj3\simulation\qsim
+vcontrolecooler
+Z1 !s100 =PC<@l[c=Mc04Ed8Rfa^B0
+Z2 I2Q8=1R5JLHie48k<M7BM[2
+Z3 V@QngNPb7j8JW@MXGMM_R@3
+Z4 dC:\Users\Aluno\Documents\Igor Macedo\Sistemas Digitais\ufrn-sistemasdigitais\unidade3\simulation\qsim
+Z5 w1497448045
+Z6 8controlecooler.vo
+Z7 Fcontrolecooler.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|controlecooler.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1497448046.386000
+Z12 !s107 controlecooler.vo|
+!s101 -O0
+vcontrolecooler_vlg_check_tst
+!i10b 1
+!s100 37XHGhW<W[=;ZE@jb8JQ=0
+I8aK:C_RW0gjHPkWiUlJTP1
+Z13 VM<djlR=M7zeF@J^9_Mb<E1
+R4
+Z14 w1497448044
+Z15 8controlecooler.vt
+Z16 Fcontrolecooler.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z17 !s108 1497448046.631000
+Z18 !s107 controlecooler.vt|
+Z19 !s90 -work|work|controlecooler.vt|
+!s101 -O0
+R10
+vcontrolecooler_vlg_sample_tst
+!i10b 1
+Z20 !s100 BQ7UeLO7RjiW5EbTaGj9j3
+Z21 IV^AgiEd2DFg_:dbc:>03J0
+Z22 VSdC7OK?ORhHm4H1i1z^e82
+R4
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+vcontrolecooler_vlg_vec_tst
+!i10b 1
+Z23 !s100 8I[Z^Z;NRQEZ[:^obcj:O3
+Z24 I:Cd]^@^4l_U@l@NWKS<A@0
+Z25 V?_i2CEb84ni7D0neYHFNI2
+R4
+R14
+R15
+R16
+Z26 L0 157
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
