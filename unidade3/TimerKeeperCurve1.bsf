@@ -79,6 +79,20 @@ applicable agreement for further details.
 		(text "Select_OUT[2..0]" (rect 162 59 259 72)(font "Arial" (font_size 8)))
 		(line (pt 280 64)(pt 264 64)(line_width 3))
 	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "EqualZero" (rect 0 0 60 13)(font "Arial" (font_size 8)))
+		(text "EqualZero" (rect 199 75 259 88)(font "Arial" (font_size 8)))
+		(line (pt 280 80)(pt 264 80))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "count_overflow" (rect 0 0 86 13)(font "Arial" (font_size 8)))
+		(text "count_overflow" (rect 173 91 259 104)(font "Arial" (font_size 8)))
+		(line (pt 280 96)(pt 264 96))
+	)
 	(drawing
 		(rectangle (rect 16 16 264 112))
 	)
