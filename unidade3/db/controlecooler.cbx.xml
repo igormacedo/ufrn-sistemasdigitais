@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="controlecooler">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MainDesign|ClockDividerTest:inst19|lpm_compare8:inst2|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_49j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MainDesign|ClockDividerTest:inst19|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_o1j.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

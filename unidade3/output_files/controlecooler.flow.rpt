@@ -1,5 +1,5 @@
 Flow report for controlecooler
-Sat Jun 17 17:55:19 2017
+Sun Jun 18 13:20:43 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,21 +40,21 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun 17 17:55:19 2017           ;
+; Flow Status                        ; Successful - Sun Jun 18 13:20:43 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; controlecooler                                  ;
-; Top-level Entity Name              ; 5to3bits                                        ;
+; Top-level Entity Name              ; MainDesign                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6 / 33,216 ( < 1 % )                            ;
-;     Total combinational functions  ; 6 / 33,216 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 8 / 475 ( 2 % )                                 ;
+; Total logic elements               ; 6,604 / 33,216 ( 20 % )                         ;
+;     Total combinational functions  ; 5,902 / 33,216 ( 18 % )                         ;
+;     Dedicated logic registers      ; 4,164 / 33,216 ( 13 % )                         ;
+; Total registers                    ; 4164                                            ;
+; Total pins                         ; 45 / 475 ( 9 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
+; Total memory bits                  ; 2,043 / 483,840 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 64 / 70 ( 91 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/17/2017 17:52:40 ;
+; Start date & time ; 06/18/2017 13:19:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; controlecooler      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value  ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141812757352707.149773276007383       ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 141812757352707.149780275005977       ; --             ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --             ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --             ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>         ; --          ; --             ;
@@ -90,6 +90,48 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --             ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --             ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_ADD_SUB                           ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_DIVIDE                            ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_MULT                              ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_CONVERT                         ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_DIV                             ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_MULT                            ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_MULT                            ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_DIV                             ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_CONVERT                         ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_ADD_SUB                         ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_ADD_SUB                         ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_CONSTANT                          ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_CONVERT                         ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                           ; --             ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --             ; --          ; --             ;
@@ -125,13 +167,65 @@ applicable agreement for further details.
 ; MISC_FILE                           ; lpm_compare6.cmp                      ; --             ; --          ; --             ;
 ; MISC_FILE                           ; lpm_compare7.bsf                      ; --             ; --          ; --             ;
 ; MISC_FILE                           ; lpm_compare7.cmp                      ; --             ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --             ; 5to3bits    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --             ; 5to3bits    ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --             ; 5to3bits    ; Top            ;
+; MISC_FILE                           ; lpm_constant0.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant0.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_add_sub0.bsf                      ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_add_sub0.cmp                      ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_divide0.bsf                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_divide0.cmp                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_mult0.bsf                         ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_mult0.cmp                         ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert0.bsf                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert0_inst.vhd               ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert0.inc                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert0.cmp                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_div0.bsf                        ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_div0.cmp                        ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult0.bsf                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult0_inst.vhd                  ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult0.inc                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult0.cmp                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant1.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant1.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant2.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant2.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult1.bsf                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult1_inst.vhd                  ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult1.inc                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_mult1.cmp                       ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_div1.bsf                        ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_div1.cmp                        ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert1.bsf                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert1_inst.vhd               ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert1.inc                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert1.cmp                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant3.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant3.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant4.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant4.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_add_sub0.bsf                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_add_sub0.cmp                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_add_sub1.bsf                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_add_sub1.cmp                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant5.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant5.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant6.bsf                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_constant6.cmp                     ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert2.bsf                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert2_inst.vhd               ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert2.inc                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; altfp_convert2.cmp                    ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_counter0.bsf                      ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_counter0.cmp                      ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_compare8.bsf                      ; --             ; --          ; --             ;
+; MISC_FILE                           ; lpm_compare8.cmp                      ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --             ; MainDesign  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --             ; MainDesign  ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --             ; MainDesign  ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --             ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --             ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --             ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; 5to3bits                              ; controlecooler ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; MainDesign                            ; controlecooler ; --          ; --             ;
 +-------------------------------------+---------------------------------------+----------------+-------------+----------------+
 
 
@@ -140,13 +234,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 624 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 746 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 576 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 536 MB              ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 788 MB              ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 829 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 813 MB              ; 00:00:19                           ;
+; Fitter                    ; 00:00:58     ; 1.0                     ; 856 MB              ; 00:00:57                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 610 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 643 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 865 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:24     ; --                      ; --                  ; 00:01:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -160,7 +253,6 @@ applicable agreement for further details.
 ; Assembler                 ; igormacedo-Galago-UltraPro ; elementary OS ; elementary OS ; x86_64         ;
 ; TimeQuest Timing Analyzer ; igormacedo-Galago-UltraPro ; elementary OS ; elementary OS ; x86_64         ;
 ; EDA Netlist Writer        ; igormacedo-Galago-UltraPro ; elementary OS ; elementary OS ; x86_64         ;
-; EDA Netlist Writer        ; igormacedo-Galago-UltraPro ; elementary OS ; elementary OS ; x86_64         ;
 +---------------------------+----------------------------+---------------+---------------+----------------+
 
 
@@ -172,7 +264,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off controlecooler 
 quartus_asm --read_settings_files=off --write_settings_files=off controlecooler -c controlecooler
 quartus_sta controlecooler -c controlecooler
 quartus_eda --read_settings_files=off --write_settings_files=off controlecooler -c controlecooler
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog controlecooler -c controlecooler --vector_source=/home/igormacedo/ufrn-sistemasdigitais/unidade3/simulation/simulation.vwf --testbench_file=./simulation/qsim/controlecooler.vt
 
 
 
