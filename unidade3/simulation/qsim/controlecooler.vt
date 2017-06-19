@@ -18,30 +18,28 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/18/2017 13:13:57"
+// Generated on "06/19/2017 10:29:56"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    CurveValues
+// Verilog Self-Checking Test Bench (with test vectors) for design :    TestLatch
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module CurveValues_vlg_sample_tst(
-	CLOCK_50MHz,
-	Select_IN,
-	SensorPond,
-	TimeNow_IN,
+module TestLatch_vlg_sample_tst(
+	Clear,
+	D,
+	enable,
 	sampler_tx
 );
-input  CLOCK_50MHz;
-input [2:0] Select_IN;
-input [9:0] SensorPond;
-input [17:0] TimeNow_IN;
+input  Clear;
+input  D;
+input  enable;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(CLOCK_50MHz or Select_IN or SensorPond or TimeNow_IN)
+always @(Clear or D or enable)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -60,20 +58,20 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module CurveValues_vlg_check_tst (
-	CurveValue,
+module TestLatch_vlg_check_tst (
+	OUt,
 	sampler_rx
 );
-input [10:0] CurveValue;
+input  OUt;
 input sampler_rx;
 
-reg [10:0] CurveValue_expected;
+reg  OUt_expected;
 
-reg [10:0] CurveValue_prev;
+reg  OUt_prev;
 
-reg [10:0] CurveValue_expected_prev;
+reg  OUt_expected_prev;
 
-reg [10:0] last_CurveValue_exp;
+reg  last_OUt_exp;
 
 reg trigger;
 
@@ -95,74 +93,25 @@ end
 
 always @(trigger)
 begin
-	CurveValue_prev = CurveValue;
+	OUt_prev = OUt;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	CurveValue_expected_prev = CurveValue_expected;
+	OUt_expected_prev = OUt_expected;
 end
 
 
-// expected CurveValue[ 10 ]
+
+// expected OUt
 initial
 begin
-	CurveValue_expected[10] = 1'bX;
-end 
-// expected CurveValue[ 9 ]
-initial
-begin
-	CurveValue_expected[9] = 1'bX;
-end 
-// expected CurveValue[ 8 ]
-initial
-begin
-	CurveValue_expected[8] = 1'bX;
-end 
-// expected CurveValue[ 7 ]
-initial
-begin
-	CurveValue_expected[7] = 1'bX;
-end 
-// expected CurveValue[ 6 ]
-initial
-begin
-	CurveValue_expected[6] = 1'bX;
-end 
-// expected CurveValue[ 5 ]
-initial
-begin
-	CurveValue_expected[5] = 1'bX;
-end 
-// expected CurveValue[ 4 ]
-initial
-begin
-	CurveValue_expected[4] = 1'bX;
-end 
-// expected CurveValue[ 3 ]
-initial
-begin
-	CurveValue_expected[3] = 1'bX;
-end 
-// expected CurveValue[ 2 ]
-initial
-begin
-	CurveValue_expected[2] = 1'bX;
-end 
-// expected CurveValue[ 1 ]
-initial
-begin
-	CurveValue_expected[1] = 1'bX;
-end 
-// expected CurveValue[ 0 ]
-initial
-begin
-	CurveValue_expected[0] = 1'bX;
+	OUt_expected = 1'bX;
 end 
 // generate trigger
-always @(CurveValue_expected or CurveValue)
+always @(OUt_expected or OUt)
 begin
 	trigger <= ~trigger;
 end
@@ -172,151 +121,21 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected CurveValue = %b | ",CurveValue_expected_prev);
-	$display("| real CurveValue = %b | ",CurveValue_prev);
+	$display("| expected OUt = %b | ",OUt_expected_prev);
+	$display("| real OUt = %b | ",OUt_prev);
 `endif
 	if (
-		( CurveValue_expected_prev[0] !== 1'bx ) && ( CurveValue_prev[0] !== CurveValue_expected_prev[0] )
-		&& ((CurveValue_expected_prev[0] !== last_CurveValue_exp[0]) ||
+		( OUt_expected_prev !== 1'bx ) && ( OUt_prev !== OUt_expected_prev )
+		&& ((OUt_expected_prev !== last_OUt_exp) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
+		$display ("ERROR! Vector Mismatch for output port OUt :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUt_expected_prev);
+		$display ("     Real value = %b", OUt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[0] = CurveValue_expected_prev[0];
-	end
-	if (
-		( CurveValue_expected_prev[1] !== 1'bx ) && ( CurveValue_prev[1] !== CurveValue_expected_prev[1] )
-		&& ((CurveValue_expected_prev[1] !== last_CurveValue_exp[1]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[1] = CurveValue_expected_prev[1];
-	end
-	if (
-		( CurveValue_expected_prev[2] !== 1'bx ) && ( CurveValue_prev[2] !== CurveValue_expected_prev[2] )
-		&& ((CurveValue_expected_prev[2] !== last_CurveValue_exp[2]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[2] = CurveValue_expected_prev[2];
-	end
-	if (
-		( CurveValue_expected_prev[3] !== 1'bx ) && ( CurveValue_prev[3] !== CurveValue_expected_prev[3] )
-		&& ((CurveValue_expected_prev[3] !== last_CurveValue_exp[3]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[3] = CurveValue_expected_prev[3];
-	end
-	if (
-		( CurveValue_expected_prev[4] !== 1'bx ) && ( CurveValue_prev[4] !== CurveValue_expected_prev[4] )
-		&& ((CurveValue_expected_prev[4] !== last_CurveValue_exp[4]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[4] = CurveValue_expected_prev[4];
-	end
-	if (
-		( CurveValue_expected_prev[5] !== 1'bx ) && ( CurveValue_prev[5] !== CurveValue_expected_prev[5] )
-		&& ((CurveValue_expected_prev[5] !== last_CurveValue_exp[5]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[5] = CurveValue_expected_prev[5];
-	end
-	if (
-		( CurveValue_expected_prev[6] !== 1'bx ) && ( CurveValue_prev[6] !== CurveValue_expected_prev[6] )
-		&& ((CurveValue_expected_prev[6] !== last_CurveValue_exp[6]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[6] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[6] = CurveValue_expected_prev[6];
-	end
-	if (
-		( CurveValue_expected_prev[7] !== 1'bx ) && ( CurveValue_prev[7] !== CurveValue_expected_prev[7] )
-		&& ((CurveValue_expected_prev[7] !== last_CurveValue_exp[7]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[7] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[7] = CurveValue_expected_prev[7];
-	end
-	if (
-		( CurveValue_expected_prev[8] !== 1'bx ) && ( CurveValue_prev[8] !== CurveValue_expected_prev[8] )
-		&& ((CurveValue_expected_prev[8] !== last_CurveValue_exp[8]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[8] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[8] = CurveValue_expected_prev[8];
-	end
-	if (
-		( CurveValue_expected_prev[9] !== 1'bx ) && ( CurveValue_prev[9] !== CurveValue_expected_prev[9] )
-		&& ((CurveValue_expected_prev[9] !== last_CurveValue_exp[9]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[9] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[9] = CurveValue_expected_prev[9];
-	end
-	if (
-		( CurveValue_expected_prev[10] !== 1'bx ) && ( CurveValue_prev[10] !== CurveValue_expected_prev[10] )
-		&& ((CurveValue_expected_prev[10] !== last_CurveValue_exp[10]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port CurveValue[10] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", CurveValue_expected_prev);
-		$display ("     Real value = %b", CurveValue_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_CurveValue_exp[10] = CurveValue_expected_prev[10];
+		last_OUt_exp = OUt_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -334,262 +153,65 @@ $finish;
 end 
 endmodule
 
-module CurveValues_vlg_vec_tst();
+module TestLatch_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg CLOCK_50MHz;
-reg [2:0] Select_IN;
-reg [9:0] SensorPond;
-reg [17:0] TimeNow_IN;
+reg Clear;
+reg D;
+reg enable;
 // wires                                               
-wire [10:0] CurveValue;
+wire OUt;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-CurveValues i1 (
+TestLatch i1 (
 // port map - connection between master ports and signals/registers   
-	.CLOCK_50MHz(CLOCK_50MHz),
-	.CurveValue(CurveValue),
-	.Select_IN(Select_IN),
-	.SensorPond(SensorPond),
-	.TimeNow_IN(TimeNow_IN)
+	.Clear(Clear),
+	.D(D),
+	.enable(enable),
+	.OUt(OUt)
 );
 
-// CLOCK_50MHz
-always
-begin
-	CLOCK_50MHz = 1'b0;
-	CLOCK_50MHz = #5000 1'b1;
-	#5000;
-end 
-// Select_IN[ 2 ]
+// Clear
 initial
 begin
-	Select_IN[2] = 1'b0;
-end 
-// Select_IN[ 1 ]
-initial
-begin
-	Select_IN[1] = 1'b0;
-	Select_IN[1] = #50000000 1'b1;
-end 
-// Select_IN[ 0 ]
-initial
-begin
-	Select_IN[0] = 1'b1;
-	Select_IN[0] = #50000000 1'b0;
-end 
-// SensorPond[ 9 ]
-initial
-begin
-	SensorPond[9] = 1'b0;
-end 
-// SensorPond[ 8 ]
-initial
-begin
-	SensorPond[8] = 1'b0;
-end 
-// SensorPond[ 7 ]
-initial
-begin
-	SensorPond[7] = 1'b0;
-end 
-// SensorPond[ 6 ]
-initial
-begin
-	SensorPond[6] = 1'b0;
-end 
-// SensorPond[ 5 ]
-initial
-begin
-	SensorPond[5] = 1'b0;
-end 
-// SensorPond[ 4 ]
-initial
-begin
-	SensorPond[4] = 1'b0;
-end 
-// SensorPond[ 3 ]
-initial
-begin
-	SensorPond[3] = 1'b0;
-end 
-// SensorPond[ 2 ]
-initial
-begin
-	SensorPond[2] = 1'b0;
-end 
-// SensorPond[ 1 ]
-initial
-begin
-	SensorPond[1] = 1'b0;
-end 
-// SensorPond[ 0 ]
-initial
-begin
-	SensorPond[0] = 1'b0;
-end 
-// TimeNow_IN[ 17 ]
-initial
-begin
-	TimeNow_IN[17] = 1'b0;
-end 
-// TimeNow_IN[ 16 ]
-initial
-begin
-	TimeNow_IN[16] = 1'b0;
-end 
-// TimeNow_IN[ 15 ]
-initial
-begin
-	TimeNow_IN[15] = 1'b0;
-	TimeNow_IN[15] = #65000000 1'b1;
-end 
-// TimeNow_IN[ 14 ]
-initial
-begin
-	TimeNow_IN[14] = 1'b1;
-	TimeNow_IN[14] = #65000000 1'b0;
-end 
-// TimeNow_IN[ 13 ]
-initial
-begin
-	TimeNow_IN[13] = 1'b0;
-	TimeNow_IN[13] = #25000000 1'b1;
-	TimeNow_IN[13] = #40000000 1'b0;
-end 
-// TimeNow_IN[ 12 ]
-initial
-begin
-	TimeNow_IN[12] = 1'b0;
-	# 5000000;
-	repeat(2)
-	begin
-		TimeNow_IN[12] = 1'b1;
-		TimeNow_IN[12] = #20000000 1'b0;
-		# 20000000;
-	end
-	TimeNow_IN[12] = 1'b1;
-end 
-// TimeNow_IN[ 11 ]
-initial
-begin
-	TimeNow_IN[11] = 1'b1;
-	# 5000000;
-	repeat(4)
-	begin
-		TimeNow_IN[11] = 1'b0;
-		TimeNow_IN[11] = #10000000 1'b1;
-		# 10000000;
-	end
-	TimeNow_IN[11] = 1'b0;
-	TimeNow_IN[11] = #10000000 1'b1;
-end 
-// TimeNow_IN[ 10 ]
-always
-begin
-	TimeNow_IN[10] = 1'b1;
-	TimeNow_IN[10] = #5000000 1'b0;
-	#5000000;
-end 
-// TimeNow_IN[ 9 ]
-initial
-begin
-	TimeNow_IN[9] = 1'b1;
-	TimeNow_IN[9] = #10000000 1'b0;
-end 
-// TimeNow_IN[ 8 ]
-initial
-begin
-	TimeNow_IN[8] = 1'b0;
-	TimeNow_IN[8] = #10000000 1'b1;
-	TimeNow_IN[8] = #55000000 1'b0;
-end 
-// TimeNow_IN[ 7 ]
-initial
-begin
-	TimeNow_IN[7] = 1'b0;
-	TimeNow_IN[7] = #10000000 1'b1;
-	TimeNow_IN[7] = #25000000 1'b0;
-	TimeNow_IN[7] = #30000000 1'b1;
-	TimeNow_IN[7] = #25000000 1'b0;
-end 
-// TimeNow_IN[ 6 ]
-initial
-begin
-	repeat(2)
-	begin
-		TimeNow_IN[6] = 1'b0;
-		TimeNow_IN[6] = #10000000 1'b1;
-		# 15000000;
-	end
-	repeat(2)
-	begin
-		TimeNow_IN[6] = 1'b0;
-		TimeNow_IN[6] = #15000000 1'b1;
-		# 10000000;
-	end
-end 
-// TimeNow_IN[ 5 ]
-initial
-begin
-	TimeNow_IN[5] = 1'b1;
-	# 5000000;
-	repeat(2)
-	begin
-		TimeNow_IN[5] = 1'b0;
-		TimeNow_IN[5] = #5000000 1'b1;
-		TimeNow_IN[5] = #5000000 1'b0;
-		TimeNow_IN[5] = #10000000 1'b1;
-		TimeNow_IN[5] = #5000000 1'b0;
-		TimeNow_IN[5] = #5000000 1'b1;
-		# 10000000;
-	end
-	TimeNow_IN[5] = 1'b0;
-	TimeNow_IN[5] = #5000000 1'b1;
-	TimeNow_IN[5] = #5000000 1'b0;
-end 
-// TimeNow_IN[ 4 ]
-always
-begin
-	TimeNow_IN[4] = 1'b0;
-	TimeNow_IN[4] = #10000000 1'b1;
-	#10000000;
-end 
-// TimeNow_IN[ 3 ]
-always
-begin
-	TimeNow_IN[3] = 1'b0;
-	TimeNow_IN[3] = #5000000 1'b1;
-	#5000000;
-end 
-// TimeNow_IN[ 2 ]
-initial
-begin
-	TimeNow_IN[2] = 1'b0;
-end 
-// TimeNow_IN[ 1 ]
-initial
-begin
-	TimeNow_IN[1] = 1'b0;
-end 
-// TimeNow_IN[ 0 ]
-initial
-begin
-	TimeNow_IN[0] = 1'b0;
+	Clear = 1'b0;
+	Clear = #14080000 1'b1;
+	Clear = #6400000 1'b0;
+	Clear = #46080000 1'b1;
+	Clear = #8960000 1'b0;
 end 
 
-CurveValues_vlg_sample_tst tb_sample (
-	.CLOCK_50MHz(CLOCK_50MHz),
-	.Select_IN(Select_IN),
-	.SensorPond(SensorPond),
-	.TimeNow_IN(TimeNow_IN),
+// D
+always
+begin
+	D = 1'b0;
+	D = #5000000 1'b1;
+	#5000000;
+end 
+
+// enable
+initial
+begin
+	repeat(2)
+	begin
+		enable = 1'b0;
+		enable = #20000000 1'b1;
+		# 20000000;
+	end
+	enable = 1'b0;
+end 
+
+TestLatch_vlg_sample_tst tb_sample (
+	.Clear(Clear),
+	.D(D),
+	.enable(enable),
 	.sampler_tx(sampler)
 );
 
-CurveValues_vlg_check_tst tb_out(
-	.CurveValue(CurveValue),
+TestLatch_vlg_check_tst tb_out(
+	.OUt(OUt),
 	.sampler_rx(sampler)
 );
 endmodule

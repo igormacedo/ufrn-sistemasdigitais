@@ -1,4 +1,4 @@
-/* Simulator = Quartus II Simulator */
+/* Simulator = ModelSim */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -33,7 +33,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("pin_name1")
+SIGNAL("out")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -43,7 +43,7 @@ SIGNAL("pin_name1")
 	PARENT = "";
 }
 
-SIGNAL("pin_name2")
+SIGNAL("D")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -53,7 +53,7 @@ SIGNAL("pin_name2")
 	PARENT = "";
 }
 
-SIGNAL("pin_name3")
+SIGNAL("Enable")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -63,7 +63,7 @@ SIGNAL("pin_name3")
 	PARENT = "";
 }
 
-SIGNAL("pin_name4")
+SIGNAL("Clear")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -73,7 +73,7 @@ SIGNAL("pin_name4")
 	PARENT = "";
 }
 
-TRANSITION_LIST("pin_name1")
+TRANSITION_LIST("out")
 {
 	NODE
 	{
@@ -82,7 +82,7 @@ TRANSITION_LIST("pin_name1")
 	}
 }
 
-TRANSITION_LIST("pin_name2")
+TRANSITION_LIST("D")
 {
 	NODE
 	{
@@ -96,21 +96,31 @@ TRANSITION_LIST("pin_name2")
 	}
 }
 
-TRANSITION_LIST("pin_name3")
+TRANSITION_LIST("Enable")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 5;
+			REPEAT = 1;
+			LEVEL 0 FOR 10000.0;
+			LEVEL 1 FOR 10000.0;
+		}
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 9040.0;
+		LEVEL 0 FOR 10960.0;
+		LEVEL 1 FOR 10000.0;
+		NODE
+		{
+			REPEAT = 2;
 			LEVEL 0 FOR 10000.0;
 			LEVEL 1 FOR 10000.0;
 		}
 	}
 }
 
-TRANSITION_LIST("pin_name4")
+TRANSITION_LIST("Clear")
 {
 	NODE
 	{
@@ -126,7 +136,7 @@ TRANSITION_LIST("pin_name4")
 
 DISPLAY_LINE
 {
-	CHANNEL = "pin_name2";
+	CHANNEL = "D";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -135,7 +145,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "pin_name3";
+	CHANNEL = "Enable";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -144,7 +154,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "pin_name4";
+	CHANNEL = "Clear";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -153,7 +163,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "pin_name1";
+	CHANNEL = "out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;

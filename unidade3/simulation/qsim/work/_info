@@ -17,65 +17,145 @@ r1
 31
 Z9 !s90 -work|work|controlecooler.vo|
 Z10 o-work work -O0
-!i10b 1
-!s85 0
 Z11 !s108 1497448046.386000
 Z12 !s107 controlecooler.vo|
+!i10b 1
+!s85 0
 !s101 -O0
 vcontrolecooler_vlg_check_tst
-!i10b 1
-!s100 37XHGhW<W[=;ZE@jb8JQ=0
-I8aK:C_RW0gjHPkWiUlJTP1
-Z13 VM<djlR=M7zeF@J^9_Mb<E1
+Z13 I8aK:C_RW0gjHPkWiUlJTP1
+Z14 VM<djlR=M7zeF@J^9_Mb<E1
 R4
-Z14 w1497448044
-Z15 8controlecooler.vt
-Z16 Fcontrolecooler.vt
+Z15 w1497448044
+Z16 8controlecooler.vt
+Z17 Fcontrolecooler.vt
+L0 61
+R8
+r1
+31
+Z18 !s108 1497448046.631000
+Z19 !s107 controlecooler.vt|
+Z20 !s90 -work|work|controlecooler.vt|
+R10
+Z21 !s100 37XHGhW<W[=;ZE@jb8JQ=0
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrolecooler_vlg_sample_tst
+Z22 !s100 BQ7UeLO7RjiW5EbTaGj9j3
+Z23 IV^AgiEd2DFg_:dbc:>03J0
+Z24 VSdC7OK?ORhHm4H1i1z^e82
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+31
+R18
+R19
+R20
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrolecooler_vlg_vec_tst
+Z25 !s100 8I[Z^Z;NRQEZ[:^obcj:O3
+Z26 I:Cd]^@^4l_U@l@NWKS<A@0
+Z27 V?_i2CEb84ni7D0neYHFNI2
+R4
+R15
+R16
+R17
+Z28 L0 157
+R8
+r1
+31
+R18
+R19
+R20
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vTestLatch
+Z29 !s100 [NjXhP8W>4nBTYNNFNf<j1
+Z30 I2h9Z=Q`10WmUeiMLbgKeG2
+Z31 Vgz8eKLR8H0hU]Lghl?:Fj3
+R4
+Z32 w1497878997
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z33 n@test@latch
+!i10b 1
+!s85 0
+Z34 !s108 1497878998.531000
+R12
+!s101 -O0
+vTestLatch_vlg_check_tst
+!i10b 1
+!s100 MHBfX`dMA0oHeiOcKLzke3
+IHQBgS?G]WzN:?bLEXjjCg1
+V8mQOiYe[4iDVPE<<zfjKe3
+R4
+Z35 w1497878996
+R16
+R17
 L0 61
 R8
 r1
 !s85 0
 31
-Z17 !s108 1497448046.631000
-Z18 !s107 controlecooler.vt|
-Z19 !s90 -work|work|controlecooler.vt|
+Z36 !s108 1497878998.791000
+Z37 !s107 controlecooler.vt|
+R20
 !s101 -O0
 R10
-vcontrolecooler_vlg_sample_tst
+n@test@latch_vlg_check_tst
+vTestLatch_vlg_sample_tst
 !i10b 1
-Z20 !s100 BQ7UeLO7RjiW5EbTaGj9j3
-Z21 IV^AgiEd2DFg_:dbc:>03J0
-Z22 VSdC7OK?ORhHm4H1i1z^e82
+!s100 A^z]1`gdBM=z7j<9KQgPD1
+IZBH?hPVhcOHl@hPAEH<hC3
+VWgf2]^VA`@Y_G3fBaT:KO0
 R4
-R14
-R15
+R35
 R16
+R17
 L0 29
 R8
 r1
 !s85 0
 31
-R17
-R18
-R19
+R36
+R37
+R20
 !s101 -O0
 R10
-vcontrolecooler_vlg_vec_tst
+n@test@latch_vlg_sample_tst
+vTestLatch_vlg_vec_tst
 !i10b 1
-Z23 !s100 8I[Z^Z;NRQEZ[:^obcj:O3
-Z24 I:Cd]^@^4l_U@l@NWKS<A@0
-Z25 V?_i2CEb84ni7D0neYHFNI2
+!s100 AFSBa>Nd=0K7i3ZWmaVjn0
+I^7g6aQ8lGCzk;DcB^R:Mb0
+Z38 Vh9b?U[;b>e301ee@S434d0
 R4
-R14
-R15
+R35
 R16
-Z26 L0 157
+R17
+L0 156
 R8
 r1
 !s85 0
 31
-R17
-R18
-R19
+R36
+R37
+R20
 !s101 -O0
 R10
+Z39 n@test@latch_vlg_vec_tst

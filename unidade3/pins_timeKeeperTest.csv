@@ -1,0 +1,68 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# File: C:\Users\Aluno\Documents\Igor Macedo\Sistemas Digitais\ufrn-sistemasdigitais\unidade3\pins_timeKeeperTest.csv
+# Generated on: Mon Jun 19 09:56:47 2017
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
+Async_CLR,Input,PIN_N25,5,B5_N1,PIN_P2,,,,
+Clock_1Khz_IN,Input,PIN_D13,3,B3_N0,PIN_N1,,,,
+CLOCK_50MHz,Input,PIN_N2,2,B2_N1,PIN_N2,,,,
+count_overflow,Output,PIN_Y18,7,B7_N0,PIN_M2,,,,
+Count_Time_EN,Input,PIN_N26,5,B5_N1,PIN_M4,,,,
+EqualZero,Output,PIN_AA20,7,B7_N0,PIN_J13,,,,
+PWM_Curve_OUT[9],Output,,,,PIN_R6,,,,
+PWM_Curve_OUT[8],Output,,,,PIN_R7,,,,
+PWM_Curve_OUT[7],Output,,,,PIN_R4,,,,
+PWM_Curve_OUT[6],Output,,,,PIN_T4,,,,
+PWM_Curve_OUT[5],Output,,,,PIN_R5,,,,
+PWM_Curve_OUT[4],Output,,,,PIN_P7,,,,
+PWM_Curve_OUT[3],Output,,,,PIN_T3,,,,
+PWM_Curve_OUT[2],Output,,,,PIN_P6,,,,
+PWM_Curve_OUT[1],Output,,,,PIN_T2,,,,
+PWM_Curve_OUT[0],Output,,,,PIN_T10,,,,
+Select_OUT[2],Output,,,,PIN_M5,,,,
+Select_OUT[1],Output,,,,PIN_F11,,,,
+Select_OUT[0],Output,,,,PIN_M3,,,,
+Sensor_IN[9],Input,,,,PIN_C12,,,,
+Sensor_IN[8],Input,,,,PIN_AD12,,,,
+Sensor_IN[7],Input,,,,PIN_Y12,,,,
+Sensor_IN[6],Input,,,,PIN_AE11,,,,
+Sensor_IN[5],Input,,,,PIN_AA12,,,,
+Sensor_IN[4],Input,,,,PIN_V13,,,,
+Sensor_IN[3],Input,,,,PIN_AD11,,,,
+Sensor_IN[2],Input,,,,PIN_B12,,,,
+Sensor_IN[1],Input,,,,PIN_U12,,,,
+Sensor_IN[0],Input,,,,PIN_V11,,,,
+TimeNow_OUT[17],Output,PIN_AD12,8,B8_N0,PIN_L10,,,,
+TimeNow_OUT[16],Output,PIN_AE12,8,B8_N0,PIN_E10,,,,
+TimeNow_OUT[15],Output,PIN_AE13,8,B8_N0,PIN_G11,,,,
+TimeNow_OUT[14],Output,PIN_AF13,8,B8_N0,PIN_A8,,,,
+TimeNow_OUT[13],Output,PIN_AE15,7,B7_N1,PIN_D11,,,,
+TimeNow_OUT[12],Output,PIN_AD15,7,B7_N1,PIN_B8,,,,
+TimeNow_OUT[11],Output,PIN_AC14,7,B7_N1,PIN_E12,,,,
+TimeNow_OUT[10],Output,PIN_AA13,7,B7_N1,PIN_D12,,,,
+TimeNow_OUT[9],Output,PIN_Y13,7,B7_N1,PIN_A9,,,,
+TimeNow_OUT[8],Output,PIN_AA14,7,B7_N1,PIN_J14,,,,
+TimeNow_OUT[7],Output,PIN_AC21,7,B7_N0,PIN_B9,,,,
+TimeNow_OUT[6],Output,PIN_AD21,7,B7_N0,PIN_C10,,,,
+TimeNow_OUT[5],Output,PIN_AD23,7,B7_N0,PIN_A10,,,,
+TimeNow_OUT[4],Output,PIN_AD22,7,B7_N0,PIN_D9,,,,
+TimeNow_OUT[3],Output,PIN_AC22,7,B7_N0,PIN_H11,,,,
+TimeNow_OUT[2],Output,PIN_AB21,7,B7_N0,PIN_H12,,,,
+TimeNow_OUT[1],Output,PIN_AF23,7,B7_N0,PIN_B10,,,,
+TimeNow_OUT[0],Output,PIN_AE23,7,B7_N0,PIN_D10,,,,
