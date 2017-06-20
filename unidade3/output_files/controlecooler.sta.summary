@@ -3,130 +3,130 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLOCK_50MHz'
-Slack : -12.720
-TNS   : -17729.826
+Slack : -10.006
+TNS   : -17207.133
 
-Type  : Slow Model Setup 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -3.649
-TNS   : -63.072
+Type  : Slow Model Setup 'ClockDividerTest:Clock1MHz|inst1'
+Slack : -2.447
+TNS   : -72.040
 
-Type  : Slow Model Setup 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : -2.392
-TNS   : -71.160
-
-Type  : Slow Model Hold 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -2.866
-TNS   : -33.085
+Type  : Slow Model Setup 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -1.763
+TNS   : -21.535
 
 Type  : Slow Model Hold 'CLOCK_50MHz'
-Slack : -2.123
-TNS   : -29.074
+Slack : -1.221
+TNS   : -3.548
 
-Type  : Slow Model Hold 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : 0.802
+Type  : Slow Model Hold 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -0.770
+TNS   : -1.535
+
+Type  : Slow Model Hold 'ClockDividerTest:Clock1MHz|inst1'
+Slack : 0.795
 TNS   : 0.000
 
-Type  : Slow Model Recovery 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
-Slack : -4.367
-TNS   : -4.367
+Type  : Slow Model Recovery 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -2.783
+TNS   : -47.799
 
-Type  : Slow Model Recovery 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : -3.569
-TNS   : -102.740
+Type  : Slow Model Recovery 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
+Slack : -2.380
+TNS   : -2.380
 
-Type  : Slow Model Recovery 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -2.994
-TNS   : -49.428
+Type  : Slow Model Recovery 'ClockDividerTest:Clock1MHz|inst1'
+Slack : -1.757
+TNS   : -49.710
 
-Type  : Slow Model Removal 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : 1.605
+Type  : Slow Model Removal 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
+Slack : 1.169
 TNS   : 0.000
 
-Type  : Slow Model Removal 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : 2.459
+Type  : Slow Model Removal 'ClockDividerTest:Clock1MHz|inst1'
+Slack : 1.197
 TNS   : 0.000
 
-Type  : Slow Model Removal 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
-Slack : 2.748
+Type  : Slow Model Removal 'FrequencyDivider:Clock1KHz|inst1'
+Slack : 2.255
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50MHz'
 Slack : -1.627
-TNS   : -13394.884
+TNS   : -13396.884
 
-Type  : Slow Model Minimum Pulse Width 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
+Type  : Slow Model Minimum Pulse Width 'ClockDividerTest:Clock1MHz|inst1'
 Slack : -0.500
 TNS   : -30.000
 
-Type  : Slow Model Minimum Pulse Width 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
+Type  : Slow Model Minimum Pulse Width 'FrequencyDivider:Clock1KHz|inst1'
 Slack : -0.500
 TNS   : -18.000
 
-Type  : Slow Model Minimum Pulse Width 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
+Type  : Slow Model Minimum Pulse Width 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
 Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'CLOCK_50MHz'
-Slack : -4.965
-TNS   : -5394.925
+Slack : -3.479
+TNS   : -5078.021
 
-Type  : Fast Model Setup 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -1.183
-TNS   : -20.160
+Type  : Fast Model Setup 'ClockDividerTest:Clock1MHz|inst1'
+Slack : -0.607
+TNS   : -17.580
 
-Type  : Fast Model Setup 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : -0.578
-TNS   : -17.190
+Type  : Fast Model Setup 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -0.305
+TNS   : -1.047
 
 Type  : Fast Model Hold 'CLOCK_50MHz'
-Slack : -1.436
-TNS   : -22.345
+Slack : -0.995
+TNS   : -5.311
 
-Type  : Fast Model Hold 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -1.432
-TNS   : -17.154
+Type  : Fast Model Hold 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -0.475
+TNS   : -1.751
 
-Type  : Fast Model Hold 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : 0.358
+Type  : Fast Model Hold 'ClockDividerTest:Clock1MHz|inst1'
+Slack : 0.049
 TNS   : 0.000
 
-Type  : Fast Model Recovery 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
-Slack : -1.786
-TNS   : -1.786
+Type  : Fast Model Recovery 'FrequencyDivider:Clock1KHz|inst1'
+Slack : -0.827
+TNS   : -13.824
 
-Type  : Fast Model Recovery 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : -0.902
-TNS   : -25.260
+Type  : Fast Model Recovery 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
+Slack : -0.640
+TNS   : -0.640
 
-Type  : Fast Model Recovery 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : -0.896
-TNS   : -14.157
+Type  : Fast Model Recovery 'ClockDividerTest:Clock1MHz|inst1'
+Slack : -0.123
+TNS   : -2.370
 
-Type  : Fast Model Removal 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
-Slack : 0.844
+Type  : Fast Model Removal 'ClockDividerTest:Clock1MHz|inst1'
+Slack : 0.405
 TNS   : 0.000
 
-Type  : Fast Model Removal 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
-Slack : 0.977
+Type  : Fast Model Removal 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
+Slack : 0.679
 TNS   : 0.000
 
-Type  : Fast Model Removal 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
-Slack : 1.673
+Type  : Fast Model Removal 'FrequencyDivider:Clock1KHz|inst1'
+Slack : 1.124
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50MHz'
 Slack : -1.627
-TNS   : -13651.396
+TNS   : -13653.396
 
-Type  : Fast Model Minimum Pulse Width 'ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|safe_q[0]'
+Type  : Fast Model Minimum Pulse Width 'ClockDividerTest:Clock1MHz|inst1'
 Slack : -0.500
 TNS   : -30.000
 
-Type  : Fast Model Minimum Pulse Width 'FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|safe_q[10]'
+Type  : Fast Model Minimum Pulse Width 'FrequencyDivider:Clock1KHz|inst1'
 Slack : -0.500
 TNS   : -18.000
 
-Type  : Fast Model Minimum Pulse Width 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|safe_q[0]'
+Type  : Fast Model Minimum Pulse Width 'TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated|safe_q[0]'
 Slack : 0.500
 TNS   : 0.000
 

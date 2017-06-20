@@ -103,4 +103,21 @@ set_global_assignment -name QIP_FILE lpm_counter6.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_G26 -to button
+set_location_assignment PIN_N2 -to CLOCK_50MHz
+set_location_assignment PIN_AE23 -to Led3
+set_location_assignment PIN_Y18 -to PWM_Led1
+set_location_assignment PIN_AA20 -to PWM_Led2
+set_location_assignment PIN_D25 -to PWM_Motor
+set_location_assignment PIN_A13 -to sensor[9]
+set_location_assignment PIN_B13 -to sensor[8]
+set_location_assignment PIN_C13 -to sensor[7]
+set_location_assignment PIN_AC13 -to sensor[6]
+set_location_assignment PIN_AD13 -to sensor[5]
+set_location_assignment PIN_AF14 -to sensor[4]
+set_location_assignment PIN_AE14 -to sensor[3]
+set_location_assignment PIN_P25 -to sensor[2]
+set_location_assignment PIN_N26 -to sensor[1]
+set_location_assignment PIN_N25 -to sensor[0]
+set_location_assignment PIN_J22 -to Clock_1khz_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

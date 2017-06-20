@@ -3,30 +3,32 @@ PWM_Motor <= PWMGenerator:inst1.PWM_OUT
 CLOCK_50MHz => ClockDividerTest:Clock1MHz.Clock_IN
 CLOCK_50MHz => FrequencyDivider:Clock1KHz.ClockIN
 CLOCK_50MHz => TimerKeeperCurve1:inst8.CLOCK_50MHz
-sensor[0] => TimerKeeperCurve1:inst8.Sensor_IN[0]
-sensor[0] => PWMGenerator:inst3.PWM_DutyCycle[0]
-sensor[1] => TimerKeeperCurve1:inst8.Sensor_IN[1]
-sensor[1] => PWMGenerator:inst3.PWM_DutyCycle[1]
-sensor[2] => TimerKeeperCurve1:inst8.Sensor_IN[2]
-sensor[2] => PWMGenerator:inst3.PWM_DutyCycle[2]
-sensor[3] => TimerKeeperCurve1:inst8.Sensor_IN[3]
-sensor[3] => PWMGenerator:inst3.PWM_DutyCycle[3]
-sensor[4] => TimerKeeperCurve1:inst8.Sensor_IN[4]
-sensor[4] => PWMGenerator:inst3.PWM_DutyCycle[4]
-sensor[5] => TimerKeeperCurve1:inst8.Sensor_IN[5]
-sensor[5] => PWMGenerator:inst3.PWM_DutyCycle[5]
-sensor[6] => TimerKeeperCurve1:inst8.Sensor_IN[6]
-sensor[6] => PWMGenerator:inst3.PWM_DutyCycle[6]
-sensor[7] => TimerKeeperCurve1:inst8.Sensor_IN[7]
-sensor[7] => PWMGenerator:inst3.PWM_DutyCycle[7]
-sensor[8] => TimerKeeperCurve1:inst8.Sensor_IN[8]
-sensor[8] => PWMGenerator:inst3.PWM_DutyCycle[8]
-sensor[9] => TimerKeeperCurve1:inst8.Sensor_IN[9]
-sensor[9] => PWMGenerator:inst3.PWM_DutyCycle[9]
+sensor[0] => lpm_compare10:inst7.dataa[0]
+sensor[0] => lpm_mux1:inst10.data0x[0]
+sensor[1] => lpm_compare10:inst7.dataa[1]
+sensor[1] => lpm_mux1:inst10.data0x[1]
+sensor[2] => lpm_compare10:inst7.dataa[2]
+sensor[2] => lpm_mux1:inst10.data0x[2]
+sensor[3] => lpm_compare10:inst7.dataa[3]
+sensor[3] => lpm_mux1:inst10.data0x[3]
+sensor[4] => lpm_compare10:inst7.dataa[4]
+sensor[4] => lpm_mux1:inst10.data0x[4]
+sensor[5] => lpm_compare10:inst7.dataa[5]
+sensor[5] => lpm_mux1:inst10.data0x[5]
+sensor[6] => lpm_compare10:inst7.dataa[6]
+sensor[6] => lpm_mux1:inst10.data0x[6]
+sensor[7] => lpm_compare10:inst7.dataa[7]
+sensor[7] => lpm_mux1:inst10.data0x[7]
+sensor[8] => lpm_compare10:inst7.dataa[8]
+sensor[8] => lpm_mux1:inst10.data0x[8]
+sensor[9] => lpm_compare10:inst7.dataa[9]
+sensor[9] => lpm_mux1:inst10.data0x[9]
 button => inst6.IN0
 PWM_Led1 <= PWMGenerator:inst2.PWM_OUT
 PWM_Led2 <= PWMGenerator:inst3.PWM_OUT
 Led3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock_1khz_out <= FrequencyDivider:Clock1KHz.ClockOUT
+Clock_PWM_In <= ClockDividerTest:Clock1MHz.Clock_OUT
 PWM_M[0] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[0]
 PWM_M[1] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[1]
 PWM_M[2] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[2]
@@ -37,6 +39,27 @@ PWM_M[6] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[6]
 PWM_M[7] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[7]
 PWM_M[8] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[8]
 PWM_M[9] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[9]
+SelectOUT[0] <= TimerKeeperCurve1:inst8.Select_OUT[0]
+SelectOUT[1] <= TimerKeeperCurve1:inst8.Select_OUT[1]
+SelectOUT[2] <= TimerKeeperCurve1:inst8.Select_OUT[2]
+time_now[0] <= TimerKeeperCurve1:inst8.TimeNow_OUT[0]
+time_now[1] <= TimerKeeperCurve1:inst8.TimeNow_OUT[1]
+time_now[2] <= TimerKeeperCurve1:inst8.TimeNow_OUT[2]
+time_now[3] <= TimerKeeperCurve1:inst8.TimeNow_OUT[3]
+time_now[4] <= TimerKeeperCurve1:inst8.TimeNow_OUT[4]
+time_now[5] <= TimerKeeperCurve1:inst8.TimeNow_OUT[5]
+time_now[6] <= TimerKeeperCurve1:inst8.TimeNow_OUT[6]
+time_now[7] <= TimerKeeperCurve1:inst8.TimeNow_OUT[7]
+time_now[8] <= TimerKeeperCurve1:inst8.TimeNow_OUT[8]
+time_now[9] <= TimerKeeperCurve1:inst8.TimeNow_OUT[9]
+time_now[10] <= TimerKeeperCurve1:inst8.TimeNow_OUT[10]
+time_now[11] <= TimerKeeperCurve1:inst8.TimeNow_OUT[11]
+time_now[12] <= TimerKeeperCurve1:inst8.TimeNow_OUT[12]
+time_now[13] <= TimerKeeperCurve1:inst8.TimeNow_OUT[13]
+time_now[14] <= TimerKeeperCurve1:inst8.TimeNow_OUT[14]
+time_now[15] <= TimerKeeperCurve1:inst8.TimeNow_OUT[15]
+time_now[16] <= TimerKeeperCurve1:inst8.TimeNow_OUT[16]
+time_now[17] <= TimerKeeperCurve1:inst8.TimeNow_OUT[17]
 
 
 |MainDesign|PWMGenerator:inst1
@@ -264,7 +287,8 @@ datab[9] => data_wire[6].IN1
 
 
 |MainDesign|ClockDividerTest:Clock1MHz
-Clock_OUT <= lpm_compare8:inst2.alb
+Clock_OUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Clock_IN => inst1.CLK
 Clock_IN => lpm_counter0:inst.clock
 
 
@@ -353,7 +377,7 @@ q[9] <= lpm_counter:LPM_COUNTER_component.q[9]
 
 
 |MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
-clock => cntr_o1j:auto_generated.clock
+clock => cntr_l1j:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -376,16 +400,16 @@ data[7] => ~NO_FANOUT~
 data[8] => ~NO_FANOUT~
 data[9] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_o1j:auto_generated.q[0]
-q[1] <= cntr_o1j:auto_generated.q[1]
-q[2] <= cntr_o1j:auto_generated.q[2]
-q[3] <= cntr_o1j:auto_generated.q[3]
-q[4] <= cntr_o1j:auto_generated.q[4]
-q[5] <= cntr_o1j:auto_generated.q[5]
-q[6] <= cntr_o1j:auto_generated.q[6]
-q[7] <= cntr_o1j:auto_generated.q[7]
-q[8] <= cntr_o1j:auto_generated.q[8]
-q[9] <= cntr_o1j:auto_generated.q[9]
+q[0] <= cntr_l1j:auto_generated.q[0]
+q[1] <= cntr_l1j:auto_generated.q[1]
+q[2] <= cntr_l1j:auto_generated.q[2]
+q[3] <= cntr_l1j:auto_generated.q[3]
+q[4] <= cntr_l1j:auto_generated.q[4]
+q[5] <= cntr_l1j:auto_generated.q[5]
+q[6] <= cntr_l1j:auto_generated.q[6]
+q[7] <= cntr_l1j:auto_generated.q[7]
+q[8] <= cntr_l1j:auto_generated.q[8]
+q[9] <= cntr_l1j:auto_generated.q[9]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -405,7 +429,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated
+|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_l1j:auto_generated
 clock => counter_reg_bit1a[9].CLK
 clock => counter_reg_bit1a[8].CLK
 clock => counter_reg_bit1a[7].CLK
@@ -428,7 +452,7 @@ q[8] <= counter_reg_bit1a[8].REGOUT
 q[9] <= counter_reg_bit1a[9].REGOUT
 
 
-|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|cmpr_ldc:cmpr2
+|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_l1j:auto_generated|cmpr_ldc:cmpr2
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0
@@ -616,7 +640,6 @@ datab[17] => op_1.IN2
 aclr => lpm_counter:LPM_COUNTER_component.aclr
 clock => lpm_counter:LPM_COUNTER_component.clock
 cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
-cout <= lpm_counter:LPM_COUNTER_component.cout
 q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
 q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
 q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
@@ -638,11 +661,11 @@ q[17] <= lpm_counter:LPM_COUNTER_component.q[17]
 
 
 |MainDesign|TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component
-clock => cntr_ppk:auto_generated.clock
+clock => cntr_6pi:auto_generated.clock
 clk_en => ~NO_FANOUT~
-cnt_en => cntr_ppk:auto_generated.cnt_en
+cnt_en => cntr_6pi:auto_generated.cnt_en
 updown => ~NO_FANOUT~
-aclr => cntr_ppk:auto_generated.aclr
+aclr => cntr_6pi:auto_generated.aclr
 aset => ~NO_FANOUT~
 aconst => ~NO_FANOUT~
 aload => ~NO_FANOUT~
@@ -669,25 +692,25 @@ data[15] => ~NO_FANOUT~
 data[16] => ~NO_FANOUT~
 data[17] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_ppk:auto_generated.q[0]
-q[1] <= cntr_ppk:auto_generated.q[1]
-q[2] <= cntr_ppk:auto_generated.q[2]
-q[3] <= cntr_ppk:auto_generated.q[3]
-q[4] <= cntr_ppk:auto_generated.q[4]
-q[5] <= cntr_ppk:auto_generated.q[5]
-q[6] <= cntr_ppk:auto_generated.q[6]
-q[7] <= cntr_ppk:auto_generated.q[7]
-q[8] <= cntr_ppk:auto_generated.q[8]
-q[9] <= cntr_ppk:auto_generated.q[9]
-q[10] <= cntr_ppk:auto_generated.q[10]
-q[11] <= cntr_ppk:auto_generated.q[11]
-q[12] <= cntr_ppk:auto_generated.q[12]
-q[13] <= cntr_ppk:auto_generated.q[13]
-q[14] <= cntr_ppk:auto_generated.q[14]
-q[15] <= cntr_ppk:auto_generated.q[15]
-q[16] <= cntr_ppk:auto_generated.q[16]
-q[17] <= cntr_ppk:auto_generated.q[17]
-cout <= cntr_ppk:auto_generated.cout
+q[0] <= cntr_6pi:auto_generated.q[0]
+q[1] <= cntr_6pi:auto_generated.q[1]
+q[2] <= cntr_6pi:auto_generated.q[2]
+q[3] <= cntr_6pi:auto_generated.q[3]
+q[4] <= cntr_6pi:auto_generated.q[4]
+q[5] <= cntr_6pi:auto_generated.q[5]
+q[6] <= cntr_6pi:auto_generated.q[6]
+q[7] <= cntr_6pi:auto_generated.q[7]
+q[8] <= cntr_6pi:auto_generated.q[8]
+q[9] <= cntr_6pi:auto_generated.q[9]
+q[10] <= cntr_6pi:auto_generated.q[10]
+q[11] <= cntr_6pi:auto_generated.q[11]
+q[12] <= cntr_6pi:auto_generated.q[12]
+q[13] <= cntr_6pi:auto_generated.q[13]
+q[14] <= cntr_6pi:auto_generated.q[14]
+q[15] <= cntr_6pi:auto_generated.q[15]
+q[16] <= cntr_6pi:auto_generated.q[16]
+q[17] <= cntr_6pi:auto_generated.q[17]
+cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -706,7 +729,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|MainDesign|TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated
+|MainDesign|TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated
 aclr => counter_reg_bit1a[17].ACLR
 aclr => counter_reg_bit1a[16].ACLR
 aclr => counter_reg_bit1a[15].ACLR
@@ -744,7 +767,6 @@ clock => counter_reg_bit1a[2].CLK
 clock => counter_reg_bit1a[1].CLK
 clock => counter_reg_bit1a[0].CLK
 cnt_en => _.IN1
-cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
 q[0] <= counter_reg_bit1a[0].REGOUT
 q[1] <= counter_reg_bit1a[1].REGOUT
 q[2] <= counter_reg_bit1a[2].REGOUT
@@ -763,46 +785,6 @@ q[14] <= counter_reg_bit1a[14].REGOUT
 q[15] <= counter_reg_bit1a[15].REGOUT
 q[16] <= counter_reg_bit1a[16].REGOUT
 q[17] <= counter_reg_bit1a[17].REGOUT
-
-
-|MainDesign|TimerKeeperCurve1:inst8|lpm_counter5:counter_TimeKeeper|lpm_counter:LPM_COUNTER_component|cntr_ppk:auto_generated|cmpr_tdc:cmpr2
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[3].IN0
-dataa[1] => data_wire[3].IN0
-dataa[2] => data_wire[4].IN0
-dataa[3] => data_wire[4].IN0
-dataa[4] => data_wire[5].IN0
-dataa[5] => data_wire[5].IN0
-dataa[6] => data_wire[6].IN0
-dataa[7] => data_wire[6].IN0
-dataa[8] => data_wire[7].IN0
-dataa[9] => data_wire[7].IN0
-dataa[10] => data_wire[8].IN0
-dataa[11] => data_wire[8].IN0
-dataa[12] => data_wire[9].IN0
-dataa[13] => data_wire[9].IN0
-dataa[14] => data_wire[10].IN0
-dataa[15] => data_wire[10].IN0
-dataa[16] => data_wire[11].IN0
-dataa[17] => data_wire[11].IN0
-datab[0] => data_wire[3].IN1
-datab[1] => data_wire[3].IN1
-datab[2] => data_wire[4].IN1
-datab[3] => data_wire[4].IN1
-datab[4] => data_wire[5].IN1
-datab[5] => data_wire[5].IN1
-datab[6] => data_wire[6].IN1
-datab[7] => data_wire[6].IN1
-datab[8] => data_wire[7].IN1
-datab[9] => data_wire[7].IN1
-datab[10] => data_wire[8].IN1
-datab[11] => data_wire[8].IN1
-datab[12] => data_wire[9].IN1
-datab[13] => data_wire[9].IN1
-datab[14] => data_wire[10].IN1
-datab[15] => data_wire[10].IN1
-datab[16] => data_wire[11].IN1
-datab[17] => data_wire[11].IN1
 
 
 |MainDesign|TimerKeeperCurve1:inst8|lpm_compare9:inst1
@@ -35656,6 +35638,76 @@ datab[4] => op_1.IN3
 datab[5] => datab_int[5].IN0
 
 
+|MainDesign|TimerKeeperCurve1:inst8|CurveValues:inst2|lpm_constant6:inst25
+result[0] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[0]
+result[1] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[1]
+result[2] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[2]
+result[3] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[3]
+result[4] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[4]
+result[5] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[5]
+result[6] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[6]
+result[7] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[7]
+result[8] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[8]
+result[9] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[9]
+result[10] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[10]
+result[11] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[11]
+result[12] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[12]
+result[13] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[13]
+result[14] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[14]
+result[15] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[15]
+result[16] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[16]
+result[17] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[17]
+result[18] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[18]
+result[19] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[19]
+result[20] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[20]
+result[21] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[21]
+result[22] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[22]
+result[23] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[23]
+result[24] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[24]
+result[25] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[25]
+result[26] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[26]
+result[27] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[27]
+result[28] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[28]
+result[29] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[29]
+result[30] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[30]
+result[31] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[31]
+
+
+|MainDesign|TimerKeeperCurve1:inst8|CurveValues:inst2|lpm_constant6:inst25|lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <VCC>
+result[14] <= <VCC>
+result[15] <= <GND>
+result[16] <= <GND>
+result[17] <= <VCC>
+result[18] <= <GND>
+result[19] <= <VCC>
+result[20] <= <GND>
+result[21] <= <VCC>
+result[22] <= <VCC>
+result[23] <= <GND>
+result[24] <= <VCC>
+result[25] <= <VCC>
+result[26] <= <VCC>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <VCC>
+result[31] <= <GND>
+
+
 |MainDesign|TimerKeeperCurve1:inst8|CurveValues:inst2|lpm_constant2:inst
 result[0] <= lpm_constant2_lpm_constant_039:lpm_constant2_lpm_constant_039_component.result[0]
 result[1] <= lpm_constant2_lpm_constant_039:lpm_constant2_lpm_constant_039_component.result[1]
@@ -46846,76 +46898,6 @@ result[30] <= <VCC>
 result[31] <= <GND>
 
 
-|MainDesign|TimerKeeperCurve1:inst8|CurveValues:inst2|lpm_constant6:inst25
-result[0] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[0]
-result[1] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[1]
-result[2] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[2]
-result[3] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[3]
-result[4] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[4]
-result[5] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[5]
-result[6] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[6]
-result[7] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[7]
-result[8] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[8]
-result[9] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[9]
-result[10] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[10]
-result[11] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[11]
-result[12] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[12]
-result[13] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[13]
-result[14] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[14]
-result[15] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[15]
-result[16] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[16]
-result[17] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[17]
-result[18] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[18]
-result[19] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[19]
-result[20] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[20]
-result[21] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[21]
-result[22] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[22]
-result[23] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[23]
-result[24] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[24]
-result[25] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[25]
-result[26] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[26]
-result[27] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[27]
-result[28] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[28]
-result[29] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[29]
-result[30] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[30]
-result[31] <= lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component.result[31]
-
-
-|MainDesign|TimerKeeperCurve1:inst8|CurveValues:inst2|lpm_constant6:inst25|lpm_constant6_lpm_constant_339:lpm_constant6_lpm_constant_339_component
-result[0] <= <GND>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <GND>
-result[5] <= <GND>
-result[6] <= <GND>
-result[7] <= <GND>
-result[8] <= <GND>
-result[9] <= <GND>
-result[10] <= <GND>
-result[11] <= <GND>
-result[12] <= <GND>
-result[13] <= <VCC>
-result[14] <= <VCC>
-result[15] <= <GND>
-result[16] <= <GND>
-result[17] <= <VCC>
-result[18] <= <GND>
-result[19] <= <VCC>
-result[20] <= <GND>
-result[21] <= <VCC>
-result[22] <= <VCC>
-result[23] <= <GND>
-result[24] <= <VCC>
-result[25] <= <VCC>
-result[26] <= <VCC>
-result[27] <= <GND>
-result[28] <= <GND>
-result[29] <= <GND>
-result[30] <= <VCC>
-result[31] <= <GND>
-
-
 |MainDesign|TimerKeeperCurve1:inst8|5to3bits:inst
 OUT_pin[0] <= inst29.DB_MAX_OUTPUT_PORT_TYPE
 OUT_pin[1] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
@@ -47373,7 +47355,8 @@ datab[17] => op_1.IN2
 
 
 |MainDesign|FrequencyDivider:Clock1KHz
-ClockOUT <= lpm_compare2:comp_div_freq.alb
+ClockOUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ClockIN => inst1.CLK
 ClockIN => lpm_counter6:inst.clock
 
 
@@ -47588,7 +47571,7 @@ q[30] <= lpm_counter:LPM_COUNTER_component.q[30]
 
 
 |MainDesign|FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component
-clock => cntr_n7j:auto_generated.clock
+clock => cntr_b6j:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -47632,37 +47615,37 @@ data[28] => ~NO_FANOUT~
 data[29] => ~NO_FANOUT~
 data[30] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_n7j:auto_generated.q[0]
-q[1] <= cntr_n7j:auto_generated.q[1]
-q[2] <= cntr_n7j:auto_generated.q[2]
-q[3] <= cntr_n7j:auto_generated.q[3]
-q[4] <= cntr_n7j:auto_generated.q[4]
-q[5] <= cntr_n7j:auto_generated.q[5]
-q[6] <= cntr_n7j:auto_generated.q[6]
-q[7] <= cntr_n7j:auto_generated.q[7]
-q[8] <= cntr_n7j:auto_generated.q[8]
-q[9] <= cntr_n7j:auto_generated.q[9]
-q[10] <= cntr_n7j:auto_generated.q[10]
-q[11] <= cntr_n7j:auto_generated.q[11]
-q[12] <= cntr_n7j:auto_generated.q[12]
-q[13] <= cntr_n7j:auto_generated.q[13]
-q[14] <= cntr_n7j:auto_generated.q[14]
-q[15] <= cntr_n7j:auto_generated.q[15]
-q[16] <= cntr_n7j:auto_generated.q[16]
-q[17] <= cntr_n7j:auto_generated.q[17]
-q[18] <= cntr_n7j:auto_generated.q[18]
-q[19] <= cntr_n7j:auto_generated.q[19]
-q[20] <= cntr_n7j:auto_generated.q[20]
-q[21] <= cntr_n7j:auto_generated.q[21]
-q[22] <= cntr_n7j:auto_generated.q[22]
-q[23] <= cntr_n7j:auto_generated.q[23]
-q[24] <= cntr_n7j:auto_generated.q[24]
-q[25] <= cntr_n7j:auto_generated.q[25]
-q[26] <= cntr_n7j:auto_generated.q[26]
-q[27] <= cntr_n7j:auto_generated.q[27]
-q[28] <= cntr_n7j:auto_generated.q[28]
-q[29] <= cntr_n7j:auto_generated.q[29]
-q[30] <= cntr_n7j:auto_generated.q[30]
+q[0] <= cntr_b6j:auto_generated.q[0]
+q[1] <= cntr_b6j:auto_generated.q[1]
+q[2] <= cntr_b6j:auto_generated.q[2]
+q[3] <= cntr_b6j:auto_generated.q[3]
+q[4] <= cntr_b6j:auto_generated.q[4]
+q[5] <= cntr_b6j:auto_generated.q[5]
+q[6] <= cntr_b6j:auto_generated.q[6]
+q[7] <= cntr_b6j:auto_generated.q[7]
+q[8] <= cntr_b6j:auto_generated.q[8]
+q[9] <= cntr_b6j:auto_generated.q[9]
+q[10] <= cntr_b6j:auto_generated.q[10]
+q[11] <= cntr_b6j:auto_generated.q[11]
+q[12] <= cntr_b6j:auto_generated.q[12]
+q[13] <= cntr_b6j:auto_generated.q[13]
+q[14] <= cntr_b6j:auto_generated.q[14]
+q[15] <= cntr_b6j:auto_generated.q[15]
+q[16] <= cntr_b6j:auto_generated.q[16]
+q[17] <= cntr_b6j:auto_generated.q[17]
+q[18] <= cntr_b6j:auto_generated.q[18]
+q[19] <= cntr_b6j:auto_generated.q[19]
+q[20] <= cntr_b6j:auto_generated.q[20]
+q[21] <= cntr_b6j:auto_generated.q[21]
+q[22] <= cntr_b6j:auto_generated.q[22]
+q[23] <= cntr_b6j:auto_generated.q[23]
+q[24] <= cntr_b6j:auto_generated.q[24]
+q[25] <= cntr_b6j:auto_generated.q[25]
+q[26] <= cntr_b6j:auto_generated.q[26]
+q[27] <= cntr_b6j:auto_generated.q[27]
+q[28] <= cntr_b6j:auto_generated.q[28]
+q[29] <= cntr_b6j:auto_generated.q[29]
+q[30] <= cntr_b6j:auto_generated.q[30]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -47682,7 +47665,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|MainDesign|FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated
+|MainDesign|FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_b6j:auto_generated
 clock => counter_reg_bit1a[30].CLK
 clock => counter_reg_bit1a[29].CLK
 clock => counter_reg_bit1a[28].CLK
@@ -47747,7 +47730,7 @@ q[29] <= counter_reg_bit1a[29].REGOUT
 q[30] <= counter_reg_bit1a[30].REGOUT
 
 
-|MainDesign|FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_n7j:auto_generated|cmpr_odc:cmpr2
+|MainDesign|FrequencyDivider:Clock1KHz|lpm_counter6:inst|lpm_counter:LPM_COUNTER_component|cntr_b6j:auto_generated|cmpr_odc:cmpr2
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[4].IN0
 dataa[1] => data_wire[4].IN0
@@ -47811,6 +47794,236 @@ datab[27] => data_wire[17].IN1
 datab[28] => data_wire[18].IN1
 datab[29] => data_wire[18].IN1
 datab[30] => data_wire[19].IN1
+
+
+|MainDesign|lpm_mux1:inst10
+data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
+data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
+data0x[3] => LPM_MUX:LPM_MUX_component.DATA[0][3]
+data0x[4] => LPM_MUX:LPM_MUX_component.DATA[0][4]
+data0x[5] => LPM_MUX:LPM_MUX_component.DATA[0][5]
+data0x[6] => LPM_MUX:LPM_MUX_component.DATA[0][6]
+data0x[7] => LPM_MUX:LPM_MUX_component.DATA[0][7]
+data0x[8] => LPM_MUX:LPM_MUX_component.DATA[0][8]
+data0x[9] => LPM_MUX:LPM_MUX_component.DATA[0][9]
+data1x[0] => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data1x[1] => LPM_MUX:LPM_MUX_component.DATA[1][1]
+data1x[2] => LPM_MUX:LPM_MUX_component.DATA[1][2]
+data1x[3] => LPM_MUX:LPM_MUX_component.DATA[1][3]
+data1x[4] => LPM_MUX:LPM_MUX_component.DATA[1][4]
+data1x[5] => LPM_MUX:LPM_MUX_component.DATA[1][5]
+data1x[6] => LPM_MUX:LPM_MUX_component.DATA[1][6]
+data1x[7] => LPM_MUX:LPM_MUX_component.DATA[1][7]
+data1x[8] => LPM_MUX:LPM_MUX_component.DATA[1][8]
+data1x[9] => LPM_MUX:LPM_MUX_component.DATA[1][9]
+sel => LPM_MUX:LPM_MUX_component.SEL[0]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+
+
+|MainDesign|lpm_mux1:inst10|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_g4e:auto_generated.data[0]
+data[0][1] => mux_g4e:auto_generated.data[1]
+data[0][2] => mux_g4e:auto_generated.data[2]
+data[0][3] => mux_g4e:auto_generated.data[3]
+data[0][4] => mux_g4e:auto_generated.data[4]
+data[0][5] => mux_g4e:auto_generated.data[5]
+data[0][6] => mux_g4e:auto_generated.data[6]
+data[0][7] => mux_g4e:auto_generated.data[7]
+data[0][8] => mux_g4e:auto_generated.data[8]
+data[0][9] => mux_g4e:auto_generated.data[9]
+data[1][0] => mux_g4e:auto_generated.data[10]
+data[1][1] => mux_g4e:auto_generated.data[11]
+data[1][2] => mux_g4e:auto_generated.data[12]
+data[1][3] => mux_g4e:auto_generated.data[13]
+data[1][4] => mux_g4e:auto_generated.data[14]
+data[1][5] => mux_g4e:auto_generated.data[15]
+data[1][6] => mux_g4e:auto_generated.data[16]
+data[1][7] => mux_g4e:auto_generated.data[17]
+data[1][8] => mux_g4e:auto_generated.data[18]
+data[1][9] => mux_g4e:auto_generated.data[19]
+sel[0] => mux_g4e:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_g4e:auto_generated.result[0]
+result[1] <= mux_g4e:auto_generated.result[1]
+result[2] <= mux_g4e:auto_generated.result[2]
+result[3] <= mux_g4e:auto_generated.result[3]
+result[4] <= mux_g4e:auto_generated.result[4]
+result[5] <= mux_g4e:auto_generated.result[5]
+result[6] <= mux_g4e:auto_generated.result[6]
+result[7] <= mux_g4e:auto_generated.result[7]
+result[8] <= mux_g4e:auto_generated.result[8]
+result[9] <= mux_g4e:auto_generated.result[9]
+
+
+|MainDesign|lpm_mux1:inst10|LPM_MUX:LPM_MUX_component|mux_g4e:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[4].IN1
+data[5] => result_node[5].IN1
+data[6] => result_node[6].IN1
+data[7] => result_node[7].IN1
+data[8] => result_node[8].IN1
+data[9] => result_node[9].IN1
+data[10] => result_node[0].IN1
+data[11] => result_node[1].IN1
+data[12] => result_node[2].IN1
+data[13] => result_node[3].IN1
+data[14] => result_node[4].IN1
+data[15] => result_node[5].IN1
+data[16] => result_node[6].IN1
+data[17] => result_node[7].IN1
+data[18] => result_node[8].IN1
+data[19] => result_node[9].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[9].IN0
+sel[0] => _.IN0
+sel[0] => result_node[8].IN0
+sel[0] => _.IN0
+sel[0] => result_node[7].IN0
+sel[0] => _.IN0
+sel[0] => result_node[6].IN0
+sel[0] => _.IN0
+sel[0] => result_node[5].IN0
+sel[0] => _.IN0
+sel[0] => result_node[4].IN0
+sel[0] => _.IN0
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|MainDesign|lpm_compare10:inst7
+dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
+dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
+dataa[2] => lpm_compare:LPM_COMPARE_component.dataa[2]
+dataa[3] => lpm_compare:LPM_COMPARE_component.dataa[3]
+dataa[4] => lpm_compare:LPM_COMPARE_component.dataa[4]
+dataa[5] => lpm_compare:LPM_COMPARE_component.dataa[5]
+dataa[6] => lpm_compare:LPM_COMPARE_component.dataa[6]
+dataa[7] => lpm_compare:LPM_COMPARE_component.dataa[7]
+dataa[8] => lpm_compare:LPM_COMPARE_component.dataa[8]
+dataa[9] => lpm_compare:LPM_COMPARE_component.dataa[9]
+datab[0] => lpm_compare:LPM_COMPARE_component.datab[0]
+datab[1] => lpm_compare:LPM_COMPARE_component.datab[1]
+datab[2] => lpm_compare:LPM_COMPARE_component.datab[2]
+datab[3] => lpm_compare:LPM_COMPARE_component.datab[3]
+datab[4] => lpm_compare:LPM_COMPARE_component.datab[4]
+datab[5] => lpm_compare:LPM_COMPARE_component.datab[5]
+datab[6] => lpm_compare:LPM_COMPARE_component.datab[6]
+datab[7] => lpm_compare:LPM_COMPARE_component.datab[7]
+datab[8] => lpm_compare:LPM_COMPARE_component.datab[8]
+datab[9] => lpm_compare:LPM_COMPARE_component.datab[9]
+agb <= lpm_compare:LPM_COMPARE_component.agb
+
+
+|MainDesign|lpm_compare10:inst7|lpm_compare:LPM_COMPARE_component
+dataa[0] => cmpr_oig:auto_generated.dataa[0]
+dataa[1] => cmpr_oig:auto_generated.dataa[1]
+dataa[2] => cmpr_oig:auto_generated.dataa[2]
+dataa[3] => cmpr_oig:auto_generated.dataa[3]
+dataa[4] => cmpr_oig:auto_generated.dataa[4]
+dataa[5] => cmpr_oig:auto_generated.dataa[5]
+dataa[6] => cmpr_oig:auto_generated.dataa[6]
+dataa[7] => cmpr_oig:auto_generated.dataa[7]
+dataa[8] => cmpr_oig:auto_generated.dataa[8]
+dataa[9] => cmpr_oig:auto_generated.dataa[9]
+datab[0] => cmpr_oig:auto_generated.datab[0]
+datab[1] => cmpr_oig:auto_generated.datab[1]
+datab[2] => cmpr_oig:auto_generated.datab[2]
+datab[3] => cmpr_oig:auto_generated.datab[3]
+datab[4] => cmpr_oig:auto_generated.datab[4]
+datab[5] => cmpr_oig:auto_generated.datab[5]
+datab[6] => cmpr_oig:auto_generated.datab[6]
+datab[7] => cmpr_oig:auto_generated.datab[7]
+datab[8] => cmpr_oig:auto_generated.datab[8]
+datab[9] => cmpr_oig:auto_generated.datab[9]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= <GND>
+aeb <= <GND>
+agb <= cmpr_oig:auto_generated.agb
+aleb <= <GND>
+aneb <= <GND>
+ageb <= <GND>
+
+
+|MainDesign|lpm_compare10:inst7|lpm_compare:LPM_COMPARE_component|cmpr_oig:auto_generated
+agb <= agb_int.DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => op_1.IN20
+dataa[1] => op_1.IN18
+dataa[2] => op_1.IN16
+dataa[3] => op_1.IN14
+dataa[4] => op_1.IN12
+dataa[5] => op_1.IN10
+dataa[6] => op_1.IN8
+dataa[7] => op_1.IN6
+dataa[8] => op_1.IN4
+dataa[9] => op_1.IN2
+datab[0] => op_1.IN19
+datab[1] => op_1.IN17
+datab[2] => op_1.IN15
+datab[3] => op_1.IN13
+datab[4] => op_1.IN11
+datab[5] => op_1.IN9
+datab[6] => op_1.IN7
+datab[7] => op_1.IN5
+datab[8] => op_1.IN3
+datab[9] => op_1.IN1
+
+
+|MainDesign|lpm_constant7:inst9
+result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
+result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
+result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
+result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
+result[4] <= lpm_constant:LPM_CONSTANT_component.result[4]
+result[5] <= lpm_constant:LPM_CONSTANT_component.result[5]
+result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
+result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
+result[8] <= lpm_constant:LPM_CONSTANT_component.result[8]
+result[9] <= lpm_constant:LPM_CONSTANT_component.result[9]
+
+
+|MainDesign|lpm_constant7:inst9|lpm_constant:LPM_CONSTANT_component
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <VCC>
+result[4] <= <GND>
+result[5] <= <VCC>
+result[6] <= <VCC>
+result[7] <= <VCC>
+result[8] <= <VCC>
+result[9] <= <VCC>
 
 
 |MainDesign|PWMGenerator:inst2

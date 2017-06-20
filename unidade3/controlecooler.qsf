@@ -105,7 +105,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_G26 -to button
 set_location_assignment PIN_N2 -to CLOCK_50MHz
-set_location_assignment PIN_AE23 -to Led3
+set_location_assignment PIN_AE22 -to Led3
 set_location_assignment PIN_Y18 -to PWM_Led1
 set_location_assignment PIN_AA20 -to PWM_Led2
 set_location_assignment PIN_D25 -to PWM_Motor
@@ -119,14 +119,23 @@ set_location_assignment PIN_AE14 -to sensor[3]
 set_location_assignment PIN_P25 -to sensor[2]
 set_location_assignment PIN_N26 -to sensor[1]
 set_location_assignment PIN_N25 -to sensor[0]
-set_location_assignment PIN_AB21 -to PWM_M[0]
-set_location_assignment PIN_AC22 -to PWM_M[1]
-set_location_assignment PIN_AD22 -to PWM_M[2]
-set_location_assignment PIN_AD23 -to PWM_M[3]
-set_location_assignment PIN_AD21 -to PWM_M[4]
-set_location_assignment PIN_AC21 -to PWM_M[5]
-set_location_assignment PIN_AA14 -to PWM_M[6]
-set_location_assignment PIN_Y13 -to PWM_M[7]
-set_location_assignment PIN_AA13 -to PWM_M[8]
-set_location_assignment PIN_AC14 -to PWM_M[9]
+set_location_assignment PIN_J22 -to Clock_1khz_out
+set_location_assignment PIN_AE23 -to PWM_M[0]
+set_location_assignment PIN_AF23 -to PWM_M[1]
+set_location_assignment PIN_AB21 -to PWM_M[2]
+set_location_assignment PIN_AC22 -to PWM_M[3]
+set_location_assignment PIN_AD22 -to PWM_M[4]
+set_location_assignment PIN_AD23 -to PWM_M[5]
+set_location_assignment PIN_AD21 -to PWM_M[6]
+set_location_assignment PIN_AC21 -to PWM_M[7]
+set_location_assignment PIN_AA14 -to PWM_M[8]
+set_location_assignment PIN_Y13 -to PWM_M[9]
+set_global_assignment -name QIP_FILE lpm_compare10.qip
+set_global_assignment -name QIP_FILE lpm_constant7.qip
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_location_assignment PIN_K25 -to Clock_PWM_In
+set_global_assignment -name QIP_FILE lpm_constant8.qip
+set_location_assignment PIN_AD12 -to SelectOUT[0]
+set_location_assignment PIN_AE12 -to SelectOUT[1]
+set_location_assignment PIN_AE13 -to SelectOUT[2]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
