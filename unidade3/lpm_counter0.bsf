@@ -38,7 +38,7 @@ applicable agreement for further details.
 		(line (pt 144 56)(pt 128 56)(line_width 3))
 	)
 	(drawing
-		(text "modulus 20" (rect 80 30 206 71)(font "Arial" ))
+		(text "modulus 50" (rect 80 30 206 71)(font "Arial" ))
 		(text "up counter" (rect 84 22 211 55)(font "Arial" ))
 		(line (pt 16 16)(pt 16 64))
 		(line (pt 16 16)(pt 128 16))

@@ -71,7 +71,7 @@ ARCHITECTURE SYN OF lpm_compare8 IS
 	END COMPONENT;
 
 BEGIN
-	sub_wire1_bv(9 DOWNTO 0) <= "0000001010";
+	sub_wire1_bv(9 DOWNTO 0) <= "0000011001";
 	sub_wire1    <= To_stdlogicvector(sub_wire1_bv);
 	alb    <= sub_wire0;
 
@@ -104,7 +104,7 @@ END SYN;
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 -- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "0"
 -- Retrieval info: PRIVATE: Latency NUMERIC "0"
--- Retrieval info: PRIVATE: PortBValue NUMERIC "10"
+-- Retrieval info: PRIVATE: PortBValue NUMERIC "25"
 -- Retrieval info: PRIVATE: Radix NUMERIC "10"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: SignedCompare NUMERIC "0"
@@ -121,7 +121,7 @@ END SYN;
 -- Retrieval info: USED_PORT: alb 0 0 0 0 OUTPUT NODEFVAL "alb"
 -- Retrieval info: USED_PORT: dataa 0 0 10 0 INPUT NODEFVAL "dataa[9..0]"
 -- Retrieval info: CONNECT: @dataa 0 0 10 0 dataa 0 0 10 0
--- Retrieval info: CONNECT: @datab 0 0 10 0 10 0 0 10 0
+-- Retrieval info: CONNECT: @datab 0 0 10 0 25 0 0 10 0
 -- Retrieval info: CONNECT: alb 0 0 0 0 @alb 0 0 0 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_compare8.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_compare8.inc FALSE

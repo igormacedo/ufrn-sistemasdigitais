@@ -25,7 +25,7 @@ sensor[9] => lpm_compare10:inst7.dataa[9]
 sensor[9] => lpm_mux1:inst10.data0x[9]
 button => inst6.IN0
 PWM_Led1 <= PWMGenerator:inst2.PWM_OUT
-PWM_Led2 <= PWMGenerator:inst3.PWM_OUT
+PWM_Led2 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
 Led3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 Clock_1khz_out <= FrequencyDivider:Clock1KHz.ClockOUT
 Clock_PWM_In <= ClockDividerTest:Clock1MHz.Clock_OUT
@@ -42,24 +42,6 @@ PWM_M[9] <= TimerKeeperCurve1:inst8.PWM_Curve_OUT[9]
 SelectOUT[0] <= TimerKeeperCurve1:inst8.Select_OUT[0]
 SelectOUT[1] <= TimerKeeperCurve1:inst8.Select_OUT[1]
 SelectOUT[2] <= TimerKeeperCurve1:inst8.Select_OUT[2]
-time_now[0] <= TimerKeeperCurve1:inst8.TimeNow_OUT[0]
-time_now[1] <= TimerKeeperCurve1:inst8.TimeNow_OUT[1]
-time_now[2] <= TimerKeeperCurve1:inst8.TimeNow_OUT[2]
-time_now[3] <= TimerKeeperCurve1:inst8.TimeNow_OUT[3]
-time_now[4] <= TimerKeeperCurve1:inst8.TimeNow_OUT[4]
-time_now[5] <= TimerKeeperCurve1:inst8.TimeNow_OUT[5]
-time_now[6] <= TimerKeeperCurve1:inst8.TimeNow_OUT[6]
-time_now[7] <= TimerKeeperCurve1:inst8.TimeNow_OUT[7]
-time_now[8] <= TimerKeeperCurve1:inst8.TimeNow_OUT[8]
-time_now[9] <= TimerKeeperCurve1:inst8.TimeNow_OUT[9]
-time_now[10] <= TimerKeeperCurve1:inst8.TimeNow_OUT[10]
-time_now[11] <= TimerKeeperCurve1:inst8.TimeNow_OUT[11]
-time_now[12] <= TimerKeeperCurve1:inst8.TimeNow_OUT[12]
-time_now[13] <= TimerKeeperCurve1:inst8.TimeNow_OUT[13]
-time_now[14] <= TimerKeeperCurve1:inst8.TimeNow_OUT[14]
-time_now[15] <= TimerKeeperCurve1:inst8.TimeNow_OUT[15]
-time_now[16] <= TimerKeeperCurve1:inst8.TimeNow_OUT[16]
-time_now[17] <= TimerKeeperCurve1:inst8.TimeNow_OUT[17]
 
 
 |MainDesign|PWMGenerator:inst1
@@ -377,7 +359,7 @@ q[9] <= lpm_counter:LPM_COUNTER_component.q[9]
 
 
 |MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
-clock => cntr_l1j:auto_generated.clock
+clock => cntr_o1j:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -400,16 +382,16 @@ data[7] => ~NO_FANOUT~
 data[8] => ~NO_FANOUT~
 data[9] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_l1j:auto_generated.q[0]
-q[1] <= cntr_l1j:auto_generated.q[1]
-q[2] <= cntr_l1j:auto_generated.q[2]
-q[3] <= cntr_l1j:auto_generated.q[3]
-q[4] <= cntr_l1j:auto_generated.q[4]
-q[5] <= cntr_l1j:auto_generated.q[5]
-q[6] <= cntr_l1j:auto_generated.q[6]
-q[7] <= cntr_l1j:auto_generated.q[7]
-q[8] <= cntr_l1j:auto_generated.q[8]
-q[9] <= cntr_l1j:auto_generated.q[9]
+q[0] <= cntr_o1j:auto_generated.q[0]
+q[1] <= cntr_o1j:auto_generated.q[1]
+q[2] <= cntr_o1j:auto_generated.q[2]
+q[3] <= cntr_o1j:auto_generated.q[3]
+q[4] <= cntr_o1j:auto_generated.q[4]
+q[5] <= cntr_o1j:auto_generated.q[5]
+q[6] <= cntr_o1j:auto_generated.q[6]
+q[7] <= cntr_o1j:auto_generated.q[7]
+q[8] <= cntr_o1j:auto_generated.q[8]
+q[9] <= cntr_o1j:auto_generated.q[9]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -429,7 +411,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_l1j:auto_generated
+|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated
 clock => counter_reg_bit1a[9].CLK
 clock => counter_reg_bit1a[8].CLK
 clock => counter_reg_bit1a[7].CLK
@@ -452,7 +434,7 @@ q[8] <= counter_reg_bit1a[8].REGOUT
 q[9] <= counter_reg_bit1a[9].REGOUT
 
 
-|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_l1j:auto_generated|cmpr_ldc:cmpr2
+|MainDesign|ClockDividerTest:Clock1MHz|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_o1j:auto_generated|cmpr_ldc:cmpr2
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0

@@ -1,6 +1,6 @@
 Flow report for controlecooler
-Tue Jun 20 12:01:39 2017
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Tue Jun 20 14:51:06 2017
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 20 12:01:39 2017      ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Flow Status                        ; Successful - Tue Jun 20 14:51:06 2017      ;
+; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; controlecooler                             ;
 ; Top-level Entity Name              ; MainDesign                                 ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C35F672C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 6,749 / 33,216 ( 20 % )                    ;
-;     Total combinational functions  ; 6,030 / 33,216 ( 18 % )                    ;
+; Total logic elements               ; 6,767 / 33,216 ( 20 % )                    ;
+;     Total combinational functions  ; 6,054 / 33,216 ( 18 % )                    ;
 ;     Dedicated logic registers      ; 4,227 / 33,216 ( 13 % )                    ;
 ; Total registers                    ; 4227                                       ;
-; Total pins                         ; 49 / 475 ( 10 % )                          ;
+; Total pins                         ; 31 / 475 ( 7 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 2,043 / 483,840 ( < 1 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 64 / 70 ( 91 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/20/2017 11:58:58 ;
+; Start date & time ; 06/20/2017 14:48:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; controlecooler      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value  ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 48549633043999.149797073703952        ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 48549633040080.149798090302868        ; --             ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --             ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --             ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>         ; --          ; --             ;
@@ -259,12 +259,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 656 MB              ; 00:00:39                           ;
-; Fitter                    ; 00:01:39     ; 1.0                     ; 778 MB              ; 00:01:39                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 453 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 506 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 452 MB              ; 00:00:03                           ;
-; Total                     ; 00:02:31     ; --                      ; --                  ; 00:02:29                           ;
+; Analysis & Synthesis      ; 00:00:37     ; 1.0                     ; 487 MB              ; 00:00:37                           ;
+; Fitter                    ; 00:01:40     ; 1.0                     ; 568 MB              ; 00:01:40                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 364 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 407 MB              ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 357 MB              ; 00:00:04                           ;
+; Total                     ; 00:02:30     ; --                      ; --                  ; 00:02:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -273,11 +273,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; LHR03            ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; LHR03            ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; LHR03            ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; LHR03            ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; LHR03            ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; LHR06            ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; LHR06            ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; LHR06            ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LHR06            ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; LHR06            ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
