@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50MHz'
+Slack : -8.639
+TNS   : -7212.586
+
+Type  : Slow Model Setup 'freqDiv_1MHz:inst7|inst1'
+Slack : -1.376
+TNS   : -5.788
+
+Type  : Slow Model Hold 'CLOCK_50MHz'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freqDiv_1MHz:inst7|inst1'
+Slack : 0.789
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50MHz'
+Slack : -1.627
+TNS   : -3503.220
+
+Type  : Slow Model Minimum Pulse Width 'freqDiv_1MHz:inst7|inst1'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Setup 'CLOCK_50MHz'
+Slack : -3.215
+TNS   : -2115.095
+
+Type  : Fast Model Setup 'freqDiv_1MHz:inst7|inst1'
+Slack : -0.150
+TNS   : -0.150
+
+Type  : Fast Model Hold 'CLOCK_50MHz'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freqDiv_1MHz:inst7|inst1'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50MHz'
+Slack : -1.627
+TNS   : -3565.428
+
+Type  : Fast Model Minimum Pulse Width 'freqDiv_1MHz:inst7|inst1'
+Slack : -0.500
+TNS   : -9.000
+
+------------------------------------------------------------

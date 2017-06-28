@@ -1,0 +1,233 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\ufrn-sistemasdigitais\projetofinal\fpga\simulation\qsim
+vcontroller_block
+Z1 !s100 mGUN41:9m]mU:ULF1GU^S0
+Z2 I6Q@cZfiF9KKkNmbZj=7ah3
+Z3 VHIn7Bc;1UIJFY>X7VWaQP2
+Z4 dC:\Users\Aluno\ufrn-sistemasdigitais\projetofinal\fpga\simulation\qsim
+Z5 w1498659932
+Z6 8PID_controller.vo
+Z7 FPID_controller.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|PID_controller.vo|
+Z10 o-work work -O0
+Z11 !s108 1498659932.903000
+Z12 !s107 PID_controller.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontroller_block_vlg_check_tst
+Z13 !s100 QONLCRm_Ca]MmC@AT;hEe1
+Z14 IE`bUmn=j5lZlUXDC2?RHF0
+Z15 VS^_DRKm^BCQ1_WZnnb;fm1
+R4
+Z16 w1498659929
+Z17 8PID_controller.vt
+Z18 FPID_controller.vt
+L0 69
+R8
+r1
+31
+Z19 !s108 1498659934.803000
+Z20 !s107 PID_controller.vt|
+Z21 !s90 -work|work|PID_controller.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcontroller_block_vlg_sample_tst
+Z22 !s100 8VRQ=^ElQ59K:nfcIUN?i2
+Z23 I2FB<8lAjj7NmkHC7B]Qf>0
+Z24 V6o107Q<jzXO0nz3h9AG]m1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcontroller_block_vlg_vec_tst
+Z25 IXUn6hZm<E>D:h`aZjzP290
+Z26 VET_aL@lV6nU68Fk0o1bdk1
+R4
+R16
+R17
+R18
+Z27 L0 721
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z28 !s100 DIH_fk2oF;Q]zUEVBPanK2
+!i10b 1
+!s85 0
+!s101 -O0
+vdflipflop
+Z29 Id8:M7c2B^a90N>gSdWHUD1
+Z30 VBITU=ngd=P[WZORzBQkaF3
+R4
+Z31 w1498657916
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z32 !s100 KBzjdoPk>843:3N8^CjAk2
+Z33 !s108 1498657917.667000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vdflipflop_vlg_check_tst
+Z34 !s100 EYCIb2n?S31UkU`Y4RzNQ0
+Z35 I4nH6bH^hAHok5fO`9aFTM2
+Z36 V3U`Ai19F1zhJd:Boi1<OG2
+R4
+Z37 w1498657915
+R17
+R18
+L0 63
+R8
+r1
+31
+Z38 !s108 1498657917.878000
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdflipflop_vlg_sample_tst
+Z39 !s100 R7e59bNSa_:IHVKV67l2G0
+Z40 IKC:g]oafWP6>8eY]5OjHG1
+Z41 V6Z55Pb6m[1YTP76XPf;Lo0
+R4
+R37
+R17
+R18
+L0 29
+R8
+r1
+31
+R38
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdflipflop_vlg_vec_tst
+Z42 I`m][VT@zGP=SB:3ZQK2o32
+Z43 VbRSGf9g:6g;KEU9[mC4NP3
+R4
+R37
+R17
+R18
+Z44 L0 715
+R8
+r1
+31
+R38
+R20
+R21
+R10
+Z45 !s100 m<FgMWj2ONaLTa^31e[[:2
+!i10b 1
+!s85 0
+!s101 -O0
+vrising_edge_detector
+Z46 ILbA7n3l4eoPF;`HcIHdH;1
+Z47 VjAUBUz3WlCMZS@Jb<40kJ2
+R4
+Z48 w1498667615
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+Z49 !s100 N3=f7F5@_oE_E1RD@gkiS1
+!s85 0
+Z50 !s108 1498667617.584000
+R12
+!s101 -O0
+vrising_edge_detector_vlg_check_tst
+!i10b 1
+!s100 KF>iQOba88RZB`h`YB[AL0
+I<5_fD[n2oWOGZn^GOS3IY2
+VaQG4<46]Ja]`@f[l5<3i[0
+R4
+Z51 w1498667614
+R17
+R18
+L0 61
+R8
+r1
+!s85 0
+31
+Z52 !s108 1498667617.900000
+Z53 !s107 PID_controller.vt|
+R21
+!s101 -O0
+R10
+vrising_edge_detector_vlg_sample_tst
+!i10b 1
+!s100 64FdO8ElBLO99YJn33ldB0
+I1`RR4M2za?QnDd[CHXfJ`0
+V7UHzhWl_]2KI6QQdGjgTh1
+R4
+R51
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R52
+R53
+R21
+!s101 -O0
+R10
+vrising_edge_detector_vlg_vec_tst
+!i10b 1
+!s100 AJSzQ5^Ig][e:?HUBGB?`0
+IUSYWVnKUO4O57@?ek1Nj]3
+V5A;idP4<BRR90G3RalnLI2
+R4
+R51
+R17
+R18
+L0 713
+R8
+r1
+!s85 0
+31
+R52
+R53
+R21
+!s101 -O0
+R10
