@@ -34,7 +34,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 360 192 416 208))
+	(annotation_block (location)(rect 40 184 96 200))
 )
 (pin
 	(output)
@@ -51,7 +51,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1304 224 1360 240))
+	(annotation_block (location)(rect 1128 232 1184 248))
 )
 (symbol
 	(rect 752 200 816 280)
@@ -122,7 +122,7 @@ applicable agreement for further details.
 		(line (pt 144 56)(pt 128 56)(line_width 3))
 	)
 	(drawing
-		(text "modulus 50000" (rect 65 30 139 42)(font "Arial" ))
+		(text "modulus 5000000" (rect 55 30 141 42)(font "Arial" ))
 		(text "up counter" (rect 84 22 135 34)(font "Arial" ))
 		(line (pt 16 16)(pt 16 64))
 		(line (pt 16 16)(pt 128 16))
@@ -159,7 +159,7 @@ applicable agreement for further details.
 		(line (pt 128 56)(pt 112 56))
 	)
 	(drawing
-		(text "datab[]=2" (rect 20 57 73 71)(font "Arial" (font_size 8)))
+		(text "datab[]=2500000" (rect 20 57 115 71)(font "Arial" (font_size 8)))
 		(text "unsigned compare" (rect 36 26 125 38)(font "Arial" ))
 		(line (pt 16 16)(pt 16 80))
 		(line (pt 16 16)(pt 112 16))

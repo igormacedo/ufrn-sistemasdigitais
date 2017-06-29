@@ -33,27 +33,27 @@
 --applicable agreement for further details.
 
 
---lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=43480000 LPM_WIDTH=32 result
+--lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=3E4CCCCD LPM_WIDTH=32 result
 --VERSION_BEGIN 13.0 cbx_lpm_constant 2013:04:24:18:08:47:SJ cbx_mgl 2013:04:24:18:11:10:SJ  VERSION_END
 
 --synthesis_resources = 
  LIBRARY ieee;
  USE ieee.std_logic_1164.all;
 
- ENTITY  lpm_constant4_lpm_constant_e19 IS 
+ ENTITY  lpm_constant4_lpm_constant_na9 IS 
 	 PORT 
 	 ( 
 		 result	:	OUT  STD_LOGIC_VECTOR (31 DOWNTO 0)
 	 ); 
- END lpm_constant4_lpm_constant_e19;
+ END lpm_constant4_lpm_constant_na9;
 
- ARCHITECTURE RTL OF lpm_constant4_lpm_constant_e19 IS
+ ARCHITECTURE RTL OF lpm_constant4_lpm_constant_na9 IS
 
  BEGIN
 
-	result <= "01000011010010000000000000000000";
+	result <= "00111110010011001100110011001101";
 
- END RTL; --lpm_constant4_lpm_constant_e19
+ END RTL; --lpm_constant4_lpm_constant_na9
 --VALID FILE
 
 
@@ -74,7 +74,7 @@ ARCHITECTURE RTL OF lpm_constant4 IS
 
 
 
-	COMPONENT lpm_constant4_lpm_constant_e19
+	COMPONENT lpm_constant4_lpm_constant_na9
 	PORT (
 			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
@@ -83,7 +83,7 @@ ARCHITECTURE RTL OF lpm_constant4 IS
 BEGIN
 	result    <= sub_wire0(31 DOWNTO 0);
 
-	lpm_constant4_lpm_constant_e19_component : lpm_constant4_lpm_constant_e19
+	lpm_constant4_lpm_constant_na9_component : lpm_constant4_lpm_constant_na9
 	PORT MAP (
 		result => sub_wire0
 	);
@@ -100,11 +100,11 @@ END RTL;
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: Radix NUMERIC "16"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: Value NUMERIC "1128792064"
+-- Retrieval info: PRIVATE: Value NUMERIC "1045220557"
 -- Retrieval info: PRIVATE: nBit NUMERIC "32"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "1128792064"
+-- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "1045220557"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
@@ -113,5 +113,5 @@ END RTL;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant4_inst.vhd FALSE

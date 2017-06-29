@@ -33,7 +33,7 @@
 --applicable agreement for further details.
 
 
---altfp_add_sub CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" DIRECTION="ADD" OPTIMIZE="SPEED" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
+--altfp_add_sub CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" DIRECTION="ADD" OPTIMIZE="SPEED" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 clock dataa datab result
 --VERSION_BEGIN 13.0 cbx_altbarrel_shift 2013:04:24:18:08:47:SJ cbx_altfp_add_sub 2013:04:24:18:08:47:SJ cbx_altpriority_encoder 2013:04:24:18:08:47:SJ cbx_cycloneii 2013:04:24:18:08:47:SJ cbx_lpm_add_sub 2013:04:24:18:08:47:SJ cbx_lpm_compare 2013:04:24:18:08:47:SJ cbx_mgl 2013:04:24:18:11:10:SJ cbx_stratix 2013:04:24:18:08:47:SJ cbx_stratixii 2013:04:24:18:08:47:SJ  VERSION_END
 
 
@@ -1532,18 +1532,17 @@
  LIBRARY ieee;
  USE ieee.std_logic_1164.all;
 
- ENTITY  altfp_add_sub2_altfp_add_sub_vkj IS 
+ ENTITY  altfp_add_sub2_altfp_add_sub_j0j IS 
 	 PORT 
 	 ( 
-		 clk_en	:	IN  STD_LOGIC := '1';
 		 clock	:	IN  STD_LOGIC;
 		 dataa	:	IN  STD_LOGIC_VECTOR (31 DOWNTO 0);
 		 datab	:	IN  STD_LOGIC_VECTOR (31 DOWNTO 0);
 		 result	:	OUT  STD_LOGIC_VECTOR (31 DOWNTO 0)
 	 ); 
- END altfp_add_sub2_altfp_add_sub_vkj;
+ END altfp_add_sub2_altfp_add_sub_j0j;
 
- ARCHITECTURE RTL OF altfp_add_sub2_altfp_add_sub_vkj IS
+ ARCHITECTURE RTL OF altfp_add_sub2_altfp_add_sub_j0j IS
 
 	 SIGNAL  wire_lbarrel_shift_result	:	STD_LOGIC_VECTOR (25 DOWNTO 0);
 	 SIGNAL  wire_rbarrel_shift_data	:	STD_LOGIC_VECTOR (25 DOWNTO 0);
@@ -2175,6 +2174,7 @@
 	 SIGNAL  both_inputs_are_infinite_dffe1_wo :	STD_LOGIC;
 	 SIGNAL  both_inputs_are_infinite_dffe25_wi :	STD_LOGIC;
 	 SIGNAL  both_inputs_are_infinite_dffe25_wo :	STD_LOGIC;
+	 SIGNAL  clk_en	:	STD_LOGIC;
 	 SIGNAL  data_exp_dffe1_wi :	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  data_exp_dffe1_wo :	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  dataa_dffe11_wi :	STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -3291,6 +3291,7 @@
 	both_inputs_are_infinite_dffe1_wo <= both_inputs_are_infinite_dffe1;
 	both_inputs_are_infinite_dffe25_wi <= both_inputs_are_infinite_dffe1_wo;
 	both_inputs_are_infinite_dffe25_wo <= both_inputs_are_infinite_dffe25_wi;
+	clk_en <= '1';
 	data_exp_dffe1_wi <= (wire_w_lg_w_lg_exp_amb_mux_dffe15_wo316w317w OR wire_w_lg_exp_amb_mux_dffe15_wo314w);
 	data_exp_dffe1_wo <= data_exp_dffe1;
 	dataa_dffe11_wi <= dataa;
@@ -4750,7 +4751,7 @@
 		datab => trailing_zeros_limit_w
 	  );
 
- END RTL; --altfp_add_sub2_altfp_add_sub_vkj
+ END RTL; --altfp_add_sub2_altfp_add_sub_j0j
 --VALID FILE
 
 
@@ -4760,7 +4761,6 @@ USE ieee.std_logic_1164.all;
 ENTITY altfp_add_sub2 IS
 	PORT
 	(
-		clk_en		: IN STD_LOGIC ;
 		clock		: IN STD_LOGIC ;
 		dataa		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		datab		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -4775,12 +4775,11 @@ ARCHITECTURE RTL OF altfp_add_sub2 IS
 
 
 
-	COMPONENT altfp_add_sub2_altfp_add_sub_vkj
+	COMPONENT altfp_add_sub2_altfp_add_sub_j0j
 	PORT (
-			clk_en	: IN STD_LOGIC ;
 			clock	: IN STD_LOGIC ;
-			datab	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			dataa	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			datab	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 	END COMPONENT;
@@ -4788,12 +4787,11 @@ ARCHITECTURE RTL OF altfp_add_sub2 IS
 BEGIN
 	result    <= sub_wire0(31 DOWNTO 0);
 
-	altfp_add_sub2_altfp_add_sub_vkj_component : altfp_add_sub2_altfp_add_sub_vkj
+	altfp_add_sub2_altfp_add_sub_j0j_component : altfp_add_sub2_altfp_add_sub_j0j
 	PORT MAP (
-		clk_en => clk_en,
 		clock => clock,
-		datab => datab,
 		dataa => dataa,
+		datab => datab,
 		result => sub_wire0
 	);
 
@@ -4817,12 +4815,10 @@ END RTL;
 -- Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 -- Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 -- Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
--- Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 -- Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 -- Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
 -- Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
--- Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 -- Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 -- Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0
@@ -4830,6 +4826,6 @@ END RTL;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altfp_add_sub2_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm

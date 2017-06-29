@@ -66,7 +66,6 @@ set_global_assignment -name QIP_FILE lpm_constant3.qip
 set_global_assignment -name QIP_FILE altfp_convert0.qip
 set_global_assignment -name BDF_FILE PID_controller.bdf
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_N2 -to CLOCK_50MHz
 set_global_assignment -name VHDL_FILE rising_edge_detector.vhd
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/ufrn-sistemasdigitais/projetofinal/fpga/Waveform.vwf"
 set_global_assignment -name BDF_FILE velocityCalculator.bdf
@@ -91,10 +90,42 @@ set_global_assignment -name QIP_FILE lpm_constant8.qip
 set_global_assignment -name QIP_FILE lpm_mux0.qip
 set_global_assignment -name QIP_FILE lpm_constant9.qip
 set_global_assignment -name QIP_FILE lpm_constant10.qip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name VHDL_FILE edge_detector.vhd
+set_global_assignment -name BDF_FILE teste_edge_detector.bdf
+set_global_assignment -name QIP_FILE output_files/output_files/altfp_convert0.qip
+set_global_assignment -name QIP_FILE altfp_convert2.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_N2 -to CLOCK_50MHz
+set_location_assignment PIN_AE23 -to current_vel[0]
+set_location_assignment PIN_AF23 -to current_vel[1]
+set_location_assignment PIN_AB21 -to current_vel[2]
+set_location_assignment PIN_AC22 -to current_vel[3]
+set_location_assignment PIN_AD22 -to current_vel[4]
+set_location_assignment PIN_AD23 -to current_vel[5]
+set_location_assignment PIN_AD21 -to current_vel[6]
+set_location_assignment PIN_AC21 -to current_vel[7]
+set_location_assignment PIN_AA14 -to current_vel[8]
+set_location_assignment PIN_Y13 -to current_vel[9]
+set_location_assignment PIN_AA13 -to current_vel[10]
+set_location_assignment PIN_AC14 -to current_vel[11]
+set_location_assignment PIN_AD15 -to current_vel[12]
+set_location_assignment PIN_AE15 -to current_vel[13]
+set_location_assignment PIN_AF13 -to current_vel[14]
+set_location_assignment PIN_AE13 -to current_vel[15]
+set_location_assignment PIN_AE12 -to current_vel[16]
+set_location_assignment PIN_AD12 -to current_vel[17]
 set_location_assignment PIN_N25 -to ligar
-set_location_assignment PIN_D25 -to tach_in
-set_location_assignment PIN_J22 -to PWM_o
+set_location_assignment PIN_J22 -to tach_in
+set_location_assignment PIN_E25 -to PWM_o
+set_location_assignment PIN_AE22 -to pwm_number[0]
+set_location_assignment PIN_AF22 -to pwm_number[1]
+set_location_assignment PIN_W19 -to pwm_number[2]
+set_location_assignment PIN_V18 -to pwm_number[3]
+set_location_assignment PIN_U18 -to pwm_number[4]
+set_location_assignment PIN_U17 -to pwm_number[5]
+set_location_assignment PIN_AA20 -to pwm_number[6]
+set_location_assignment PIN_Y18 -to pwm_number[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
